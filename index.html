@@ -69,12 +69,13 @@ a{color:var(--blue)}
 .logo .dl{font:600 1rem 'Poppins',sans-serif;color:var(--ink)}
 .logo .dl i{color:var(--green);font-style:normal}
 .nav{display:flex;gap:4px;margin-left:12px;flex:1;align-items:center}
-.hdr .wrap{max-width:1320px;gap:14px;min-width:0}
+.hdr .wrap{max-width:1320px;gap:10px;min-width:0}
 .nav a,.nav .dd>button{white-space:nowrap}
-.nav{gap:2px}
-.vm{margin-left:auto;display:flex;align-items:center;gap:10px;padding-left:24px}
-.nav a,.nav .dd>button{padding:9px 10px;font-size:.92rem}
-@media (max-width:1399px){.vm-l{display:none}}
+.nav a[hidden]{display:none}
+.nav{gap:0}
+.vm{margin-left:auto;display:flex;align-items:center;gap:10px;padding-left:14px}
+.nav a,.nav .dd>button{padding:9px 7px;font-size:.88rem}
+@media (max-width:1559px){.vm-l{display:none}}
 .vm-l{font-size:.78rem;font-weight:800;color:var(--muted);white-space:nowrap}
 .vm .seg{background:#10224a;border:1px solid #3a4a7a;padding:3px}
 .vm .seg button{color:#cfd9f3;padding:6px 16px;font-size:.85rem}
@@ -97,6 +98,14 @@ a{color:var(--blue)}
   .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 20px 16px}
   .nav.open{display:flex}
   .dd .menu{position:static;display:block;border:0;box-shadow:none;padding:0 0 0 12px;min-width:0}
+}
+@media (min-width:1261px) and (max-width:1400px){
+  .adm .vm-l{display:inline!important}
+  .adm .vm{margin:10px 0 0;padding:0}
+  .adm .nav{margin-left:0;flex:none;display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:10px 20px 16px}
+  .adm .burger{display:block;margin-left:auto}
+  .adm .nav.open{display:flex}
+  .adm .dd .menu{position:static;display:block;border:0;box-shadow:none;padding:0 0 0 12px;min-width:0}
 }
 
 /* buttons */
@@ -391,6 +400,13 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
 .wf-nav .lg{font:700 12px Poppins;color:#16233f;border:1px dashed #b4bfd8;padding:2px 8px;border-radius:6px;margin-right:auto}
 .wf-nav span.on{color:#d24b07;font-weight:800;border-bottom:2px solid #d24b07}
 .wf-nav .rl{background:#10224a;color:#fff;border-radius:999px;padding:3px 10px;font-size:10px;font-weight:800}
+.wdn{width:62px;height:62px;border-radius:50%;background:conic-gradient(#0c7f5c 0 48%,#c53030 48% 67%,#f5b800 67% 100%);display:grid;place-items:center;flex:none;position:relative}
+.wdn::after{content:"";position:absolute;inset:14px;border-radius:50%;background:#fff}
+.wdn b{position:relative;z-index:1;font:700 14px Poppins;color:#16233f}
+.ld{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
+.wxl{display:inline-block;width:11px;height:11px;border-radius:3px;background:#1d6f42}
+.wcb{width:11px;height:11px;border:1.5px solid #9aa6c0;border-radius:3px;background:#fff;display:inline-block;flex:none}
+.wcb.on{background:#d24b07;border-color:#d24b07}
 .wf-body{padding:12px 14px}
 .wr{display:flex}
 .wc{display:grid}
@@ -497,6 +513,43 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
 .cg-h h3{font-size:1.05rem}
 .q{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
 .q:last-child{border-bottom:0}
+.ico.xl{width:1.25em;height:1.25em;vertical-align:-.28em}
+.dash-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.dash-bar .btn{gap:8px}
+@media (min-width:900px){.q>.row{flex-wrap:nowrap}.q .btn{white-space:nowrap}}
+.rsel{width:auto;max-width:150px;padding:5px 8px;font-size:.78rem;border-radius:8px}
+.rs-note{font-size:.8rem}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.trow td{font-weight:800;background:var(--surface)}
+.kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px 18px;display:grid;gap:2px}
+.kpi b{font:700 2rem 'Poppins',sans-serif;line-height:1.1}
+.kpi small{font-size:.8rem}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.chart h3{margin-bottom:14px}
+.dn{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.donut{width:170px;height:170px;flex:none}
+.donut .d-n{font:700 30px 'Poppins',sans-serif;fill:var(--ink)}
+.donut .d-l{font:700 11px 'Mulish',sans-serif;fill:var(--muted)}
+.lg{list-style:none;margin:12px 0 0;padding:0;display:flex;gap:16px;flex-wrap:wrap;font-size:.85rem}
+.dn .lg{flex-direction:column;gap:8px;margin:0}
+.lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hb{display:grid;grid-template-columns:96px 1fr 28px;gap:10px;align-items:center;margin:8px 0;font-size:.88rem}
+.hb-l{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb-l.wide{white-space:normal;line-height:1.2;font-size:.82rem}
+.hb-t{display:flex;height:16px;background:var(--surface);border-radius:8px;overflow:hidden}
+.hb-t i{display:block;height:100%}
+.hb-n{text-align:right}
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:980px){.kpis{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}}
+.bulk{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);margin:12px 0 4px}
+.bulk select{width:auto;padding:7px 10px;font-size:.85rem}
+.bulk .grow{margin-left:auto}
+.selall{display:flex;gap:8px;align-items:center;font-size:.9rem;cursor:pointer}
+.selall input,.rowchk,.cg-sel input{width:18px;height:18px;accent-color:var(--orange);cursor:pointer}
+.ql{display:flex;gap:12px;align-items:flex-start;min-width:0}
+.rowchk{margin-top:3px;flex:none}
+.rowchk.sp{display:inline-block;visibility:hidden}
+.cg-sel{display:flex;align-items:center;gap:7px;font-size:.82rem;font-weight:700;margin-left:auto;cursor:pointer}
 .qr{border-bottom:1px solid var(--line)}
 .qr:last-child{border-bottom:0}
 .qr .q{border-bottom:0}
@@ -528,6 +581,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
     </div>
     <a href="#/helpdesk" data-r="helpdesk">Helpdesk</a>
     <a href="#/requests" data-r="requests">Requests <span class="badge" id="rq-count" hidden>0</span></a>
+    <a href="#/dashboard" data-r="dashboard" id="nav-dash" hidden>Dashboard</a>
     <div class="vm" role="group" aria-label="Switch view">
       <span class="vm-l">Viewing as</span>
       <div class="seg">
@@ -638,6 +692,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <tr><td>BRQ-08</td><td>The solution handles the expected volume across cities.</td><td>RQ-02, section 7 (non-functional)</td></tr>
       <tr><td>BRQ-09</td><td>Personal data and identity documents are protected.</td><td>Section 7, PL-03</td></tr>
       <tr><td>BRQ-10</td><td>The model can be reused for other companies.</td><td>Not in release 1 (open item)</td></tr>
+      <tr><td>BRQ-12</td><td>Admins can see a summary of approved and rejected cases and of feasibility rejections, by city and in total, with reasons and charts.</td><td>5.6 RQ-09 to RQ-11</td></tr>
       <tr><td>BRQ-11</td><td>Employees can see invoices and bill history and pay bills in the portal.</td><td>5.7 BL-01 to BL-04</td></tr>
     </tbody></table></div>
   </section>
@@ -758,7 +813,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
   <section id="p2"><h2>2. Users and roles</h2>
     <div class="tbl-w"><table class="prd-t"><thead><tr><th>Role</th><th>Who</th><th>Needs</th></tr></thead><tbody>
       <tr><td><b>User</b></td><td>Deloitte employee</td><td>Apply for a connection, raise tickets, track status, escalate.</td></tr>
-      <tr><td><b>Admin</b></td><td>Deloitte admin or authorised signatory</td><td>Approve or reject new connections, see request details and address, track requests and tickets.</td></tr>
+      <tr><td><b>Admin</b></td><td>Deloitte admin or authorised signatory</td><td>Approve or reject new connections, see request details and address, track requests and tickets, and see a dashboard of approved and rejected cases.</td></tr>
       <tr><td><b>Retail SE / Community SE</b></td><td>ACT sales engineer</td><td>Receive assigned connections, complete KYC and documentation with the employee.</td></tr>
       <tr><td><b>Network engineer (NE)</b></td><td>ACT field engineer</td><td>Receive the work order, confirm the appointment, visit and install.</td></tr>
       <tr><td><b>Central support desk</b></td><td>ACT dedicated team</td><td>Single point for Deloitte and ACT coordination, tracks priority-tagged orders and escalations.</td></tr>
@@ -794,6 +849,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <li><b>Existing User:</b> Service Requests, Account Management, Offboarding.</li>
       <li><b>Helpdesk:</b> contacts, escalation matrix, TAT table, escalation form.</li>
       <li><b>Requests:</b> user tickets and the admin approval list.</li>
+      <li><b>Dashboard:</b> admin-only summary of approved and rejected cases, with charts.</li>
       <li><b>Billing:</b> invoices, bill history and bill payment. Not yet in the prototype.</li>
     </ul>
     <p>A User / Admin view switch sits at the far right of the menu in the prototype. The Workflow section (walkthrough and this PRD) is a temporary demo section and is not part of the product.</p>
@@ -867,6 +923,11 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <tr><td>RQ-04</td><td>The admin can approve or reject from the list.</td><td>Must</td><td>Built</td></tr>
       <tr><td>RQ-05</td><td>An admin sees tickets raised by all employees they oversee.</td><td>Should</td><td>Proposed</td></tr>
       <tr><td>RQ-06</td><td>The menu shows a count of open items.</td><td>Could</td><td>Built</td></tr>
+      <tr><td>RQ-07</td><td>Each pending request has a checkbox. A Select all checkbox sits in every city group and in the overall view (for the visible city filter). The admin can approve or reject all selected requests at once, with one rejection reason shared by the rejected requests.</td><td>Must</td><td>Built</td></tr>
+      <tr><td>RQ-09</td><td>Rejection reasons are chosen per case. Every pending request has its own reason list. A default reason in the bulk bar is used for any case where none is chosen. A bulk rejection uses each selected case's own reason.</td><td>Must</td><td>Built</td></tr>
+      <tr><td>RQ-10</td><td><b>Admin Dashboard</b> (admins only, own menu item): counts for applications, applications rejected in the feasibility check (in total and by city), pending, approved and rejected requests, and the approval rate. Charts for the application funnel, feasibility rejections by city, status split, requests by city, rejection reasons and approved connections by plan, plus a city-wise summary table with a total row.</td><td>Must</td><td>Built</td></tr>
+      <tr><td>RQ-11</td><td>A list of all approved and rejected cases with request, employee, city, plan, decision, rejection reason and date. It can be filtered by decision.</td><td>Must</td><td>Built</td></tr>
+      <tr><td>RQ-08</td><td>An Export to Excel button on the Admin Dashboard downloads all request data, every city and status, including applications rejected in the feasibility check, as an .xlsx file. Columns: request ID, employee name and ID, email, mobile, city, address, plan, monthly price, tenure, total payable, preferred slot, submitted time, status and rejection reason.</td><td>Must</td><td>Built</td></tr>
     </tbody></table></div>
 
     <h3 id="p58">5.7 Billing and invoices</h3>
@@ -1046,7 +1107,7 @@ var LADDER=[
 ];
 
 /* ---------- state ---------- */
-var S={role:'employee',tenure:6,plan:0,ob:null,tickets:[],sel:{fault:'down',account:'safe',offboard:'suspend'},open:{},slot:{},cal:null,confirm:{},drafts:{},force:'auto',
+var S={role:'employee',tenure:6,plan:0,pick:{},rowReason:{},dashFilter:'all',history:[],feasHist:[],feasLog:[],reason:'Not eligible under Deloitte policy',ob:null,tickets:[],sel:{fault:'down',account:'safe',offboard:'suspend'},open:{},slot:{},cal:null,confirm:{},drafts:{},force:'auto',
 seeds:[
   {id:'LD-2212',plan:500,slot:'Fri, 9 Oct 2026 · 3:00 pm – 4:00 pm',name:'Sai Prakash',emp:'HYD-20988',email:'sai.prakash@deloitte.com',phone:'9848098765',city:'Hyderabad',address:'Flat 702, My Home Avatar Apartments, Narsingi, Hyderabad 500089',tenure:12,when:'Today, 11:05 am',status:'pending'},
   {id:'LD-2210',plan:200,slot:'Sat, 10 Oct 2026 · 10:00 am – 11:00 am',name:'Meera Iyer',emp:'HYD-20417',email:'meera.iyer@deloitte.com',phone:'9848012345',city:'Hyderabad',address:'Plot 56, Road No. 36, Jubilee Hills, Hyderabad 500033',tenure:6,when:'Today, 9:40 am',status:'pending'},
@@ -1412,14 +1473,151 @@ function pHelp(){
 }
 
 /* ----- requests ----- */
+/* Sample history of earlier decisions, used by the Admin Dashboard */
+(function(){
+  var H=[
+   ['LD-2199','Rohan Kulkarni','PUN-23988','Pune','Flat 902, Panchshil Towers, Kharadi, Pune 411014',500,6,'approved','','6 Oct'],
+   ['LD-2198','Arjun Reddy','HYD-19871','Hyderabad','Plot 14, Madhapur, Hyderabad 500081',500,12,'approved','','6 Oct'],
+   ['LD-2197','Ananya Rao','BLR-31021','Bengaluru','Flat 12, Sobha Dream Acres, Panathur, Bengaluru 560103',500,12,'approved','','6 Oct'],
+   ['LD-2196','Neha Gupta','HYD-20102','Hyderabad','Flat 210, Aparna Cyber Life, Nallagandla, Hyderabad 500019',200,6,'approved','','5 Oct'],
+   ['LD-2195','Divya Krishnan','CHE-17540','Chennai','Flat 3C, Casagrand Zenith, Perungudi, Chennai 600096',500,6,'approved','','5 Oct'],
+   ['LD-2194','Vikram Shetty','BLR-31560','Bengaluru','No. 7, Indiranagar 100 Feet Road, Bengaluru 560038',200,6,'approved','','5 Oct'],
+   ['LD-2193','Ravi Teja','HYD-19640','Hyderabad','H.No 8-2-120, Banjara Hills, Hyderabad 500034',200,12,'approved','','4 Oct'],
+   ['LD-2192','Pooja Menon','BLR-31788','Bengaluru','Koramangala 5th Block, Bengaluru 560095',200,6,'approved','','3 Oct'],
+   ['LD-2191','Swathi Rao','HYD-20233','Hyderabad','Flat 604, Rajapushpa Provincia, Narsingi, Hyderabad 500075',500,6,'approved','','3 Oct'],
+   ['LD-2190','Suresh Babu','CHE-17611','Chennai','45, Anna Nagar West, Chennai 600040',200,12,'approved','','3 Oct'],
+   ['LD-2189','Kiran Kumar','HYD-20310','Hyderabad','Gachibowli, Hyderabad 500032',200,1,'rejected','Duplicate request','2 Oct'],
+   ['LD-2188','Harish Gowda','BLR-31244','Bengaluru','Electronic City Phase 1, Bengaluru 560100',200,12,'rejected','Details need correction','2 Oct'],
+   ['LD-2187','Lakshmi Narayan','CHE-17390','Chennai','T. Nagar, Chennai 600017',200,6,'rejected','Not eligible under Deloitte policy','1 Oct'],
+   ['LD-2186','Sneha Joshi','PUN-24102','Pune','Baner Road, Pune 411045',200,1,'rejected','Other','1 Oct']
+  ];
+  S.history=H.map(function(h){var n=h[1].toLowerCase().split(' ');return {id:h[0],name:h[1],emp:h[2],email:n[0]+'.'+n[1]+'@deloitte.com',phone:'98'+(40000000+parseInt(h[0].slice(3),10)*137).toString().slice(0,8),city:h[3],address:h[4],plan:h[5],tenure:h[6],slot:'',status:h[7],reason:h[8],when:h[9],sample:1}});
+})();
+/* Sample applications rejected by the server's feasibility check */
+(function(){
+  var F=[
+   ['LD-2185','Sandeep Rao','HYD-20551','Hyderabad','Shamirpet, Hyderabad',200,6,'4 Oct'],
+   ['LD-2184','Meghana Reddy','HYD-20612','Hyderabad','Ghatkesar, Hyderabad',200,12,'3 Oct'],
+   ['LD-2183','Imran Khan','HYD-20420','Hyderabad','Moinabad Road, Hyderabad',500,6,'1 Oct'],
+   ['LD-2182','Deepak Nair','BLR-31901','Bengaluru','Hoskote, Bengaluru',200,6,'5 Oct'],
+   ['LD-2181','Nisha Pillai','BLR-31877','Bengaluru','Anekal, Bengaluru',500,12,'2 Oct'],
+   ['LD-2180','Arvind Kumar','CHE-17722','Chennai','Kelambakkam, Chennai',200,6,'5 Oct'],
+   ['LD-2179','Revathi S','CHE-17690','Chennai','Sriperumbudur, Chennai',200,12,'4 Oct'],
+   ['LD-2178','Bala Murugan','CHE-17701','Chennai','Poonamallee, Chennai',500,6,'3 Oct'],
+   ['LD-2177','Gayathri R','CHE-17488','Chennai','Tambaram East, Chennai',200,1,'2 Oct'],
+   ['LD-2176','Prasad Patil','PUN-24155','Pune','Hinjewadi Phase 3, Pune',200,6,'4 Oct'],
+   ['LD-2175','Ketaki Desai','PUN-24177','Pune','Pirangut, Pune',500,6,'2 Oct'],
+   ['LD-2174','Tarun Sharma','DEL-40122','Other cities','Indore',200,6,'5 Oct'],
+   ['LD-2173','Anita Verma','DEL-40190','Other cities','Nagpur',200,12,'4 Oct'],
+   ['LD-2172','Soumya Das','KOL-51022','Other cities','Bhubaneswar',500,6,'3 Oct'],
+   ['LD-2171','Rajesh Singh','DEL-40233','Other cities','Patna',200,1,'2 Oct'],
+   ['LD-2170','Thomas Mathew','KOC-61007','Other cities','Kochi',200,6,'1 Oct']
+  ];
+  S.feasHist=F.map(function(f){var n=f[1].toLowerCase().split(' ');return {id:f[0],name:f[1],emp:f[2],email:n[0]+'.'+(n[1]||'x')+'@deloitte.com',phone:'97'+(30000000+parseInt(f[0].slice(3),10)*211).toString().slice(0,8),city:f[3],address:f[4],plan:f[5],tenure:f[6],slot:'',status:'rejected in feasibility',reason:'No serviceable network at this address',when:f[7],sample:1}});
+})();
+function feasRecords(){return S.feasHist.concat(S.feasLog)}
+var REASONS=['Not eligible under Deloitte policy','Duplicate request','Details need correction','Other'];
+function adminRecords(){
+  var out=[];
+  if(S.ob&&S.ob.status==='ok'&&S.ob.step===6){var f=S.ob.form;
+    out.push({id:S.ob.lead,live:1,name:f.name,city:f.city,when:'Just now',emp:f.emp,email:f.email,phone:f.phone,address:f.address,tenure:S.ob.tenure,plan:rp(S.ob).speed,slot:f.slot?fmtDate(f.slot.date)+' · '+f.slot.time:'',status:'pending',reason:''});}
+  S.seeds.forEach(function(x){out.push({id:x.id,name:x.name,city:x.city,when:x.when,emp:x.emp,email:x.email,phone:x.phone,address:x.address,tenure:x.tenure,plan:x.plan,slot:x.slot,sample:1,status:x.status,reason:x.reason||''})});
+  return out;
+}
+function reasonFor(id){return S.rowReason[id]||S.reason}
+function allRecords(){
+  var out=S.history.slice();
+  S.seeds.forEach(function(x){out.push({id:x.id,name:x.name,city:x.city,when:x.when,emp:x.emp,email:x.email,phone:x.phone,address:x.address,tenure:x.tenure,plan:x.plan,slot:x.slot,sample:1,status:x.status,reason:x.reason||''})});
+  var r=S.ob;
+  if(r&&r.lead){
+    var st=r.status==='rejected'&&r.rejectedAt===6?'rejected':(r.status==='ok'&&r.step===6?'pending':(r.status==='ok'&&r.step>6?'approved':null));
+    if(st){var f=r.form;out.push({id:r.lead,live:1,name:f.name,city:f.city,when:'Today',emp:f.emp,email:f.email,phone:f.phone,address:f.address,tenure:r.tenure,plan:rp(r).speed,slot:f.slot?fmtDate(f.slot.date)+' · '+f.slot.time:'',status:st,reason:r.reason||''})}
+  }
+  return out;
+}
+function approveLive(){var r=S.ob;if(!r||r.step!==6||r.status!=='ok')return false;r.step=7;r.assign=classify(r.form.address);setTimeout(function(){if(S.ob===r&&r.step===7){r.step=8;live()}},2200);return true}
+function rejectLive(reason){var r=S.ob;if(!r||r.step!==6||r.status!=='ok')return false;r.reason=reason;r.status='rejected';r.rejectedAt=6;return true}
+function visibleRecords(){
+  var recs=adminRecords(),cf=S.cityFilter;
+  return recs.filter(function(x){return !cf||cf==='All'||x.city===cf});
+}
+function exportRows(rows,label){
+  var head=['Request ID','Employee name','Employee ID','Email','Mobile','City','Address','Plan (Mbps)','Monthly price (₹)','Tenure (months)','Total payable (₹)','Preferred slot','Submitted','Status','Rejection reason'];
+  var data=[head].concat(rows.map(function(x){
+    var pl=PLANS.filter(function(q){return q.speed===x.plan})[0]||PLAN;
+    return [x.id,x.name,x.emp,x.email,x.phone,x.city,x.address,x.plan,pl.price,x.tenure,pl.price*x.tenure+PLAN.install+PLAN.deposit,x.slot||'Not specified',x.when,x.status.charAt(0).toUpperCase()+x.status.slice(1),x.reason||''];
+  }));
+  var d=new Date(),ds=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+  var name='ACT x Deloitte - '+label+' - '+ds+'.xlsx';
+  try{
+    var blob=XLSXW.make('Requests',data,[14,22,14,30,14,14,48,12,16,14,16,34,20,12,30]);
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.style.display='none';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},4000);
+    toast('Exported '+rows.length+' request'+(rows.length===1?'':'s')+' to Excel');
+  }catch(err){toast('Could not create the Excel file. Please try again.');if(window.console)console.error(err)}
+}
+function decidedRows(){
+  return allRecords().filter(function(x){return x.status!=='pending'&&(S.dashFilter==='all'||x.status===S.dashFilter)}).sort(function(a,b){return b.id.localeCompare(a.id)});
+}
+/* Minimal .xlsx writer (stored zip, no libraries) */
+var XLSXW=(function(){
+  var crcT=(function(){var t=[],c,n,k;for(n=0;n<256;n++){c=n;for(k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+  function crc(b){var c=0xFFFFFFFF;for(var i=0;i<b.length;i++)c=crcT[(c^b[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
+  var enc=new TextEncoder();
+  function zip(files){
+    var parts=[],central=[],off=0,d=new Date();
+    var dt=((d.getHours()<<11)|(d.getMinutes()<<5)|(d.getSeconds()>>1)),dd=(((d.getFullYear()-1980)<<9)|((d.getMonth()+1)<<5)|d.getDate());
+    files.forEach(function(f){
+      var nm=enc.encode(f.name),data=enc.encode(f.data),c=crc(data);
+      var lh=new DataView(new ArrayBuffer(30));
+      lh.setUint32(0,0x04034b50,true);lh.setUint16(4,20,true);lh.setUint16(6,0x0800,true);lh.setUint16(8,0,true);lh.setUint16(10,dt,true);lh.setUint16(12,dd,true);lh.setUint32(14,c,true);lh.setUint32(18,data.length,true);lh.setUint32(22,data.length,true);lh.setUint16(26,nm.length,true);lh.setUint16(28,0,true);
+      parts.push(new Uint8Array(lh.buffer),nm,data);
+      var ch=new DataView(new ArrayBuffer(46));
+      ch.setUint32(0,0x02014b50,true);ch.setUint16(4,20,true);ch.setUint16(6,20,true);ch.setUint16(8,0x0800,true);ch.setUint16(10,0,true);ch.setUint16(12,dt,true);ch.setUint16(14,dd,true);ch.setUint32(16,c,true);ch.setUint32(20,data.length,true);ch.setUint32(24,data.length,true);ch.setUint16(28,nm.length,true);ch.setUint16(30,0,true);ch.setUint16(32,0,true);ch.setUint16(34,0,true);ch.setUint16(36,0,true);ch.setUint32(38,0,true);ch.setUint32(42,off,true);
+      central.push(new Uint8Array(ch.buffer),nm);
+      off+=30+nm.length+data.length;
+    });
+    var csize=0;central.forEach(function(p){csize+=p.length});
+    var end=new DataView(new ArrayBuffer(22));
+    end.setUint32(0,0x06054b50,true);end.setUint16(8,files.length,true);end.setUint16(10,files.length,true);end.setUint32(12,csize,true);end.setUint32(16,off,true);
+    return new Blob(parts.concat(central,[new Uint8Array(end.buffer)]),{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+  }
+  var X=function(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}).replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,'')};
+  function colL(i){return String.fromCharCode(65+i)}
+  function make(sheet,rows,widths){
+    var n=rows.length,last=colL(rows[0].length-1);
+    var sd=rows.map(function(row,ri){
+      return '<row r="'+(ri+1)+'">'+row.map(function(v,ci){
+        var ref=colL(ci)+(ri+1);
+        if(typeof v==='number')return '<c r="'+ref+'"><v>'+v+'</v></c>';
+        return '<c r="'+ref+'" t="inlineStr"'+(ri===0?' s="1"':'')+'><is><t xml:space="preserve">'+X(v)+'</t></is></c>';
+      }).join('')+'</row>';
+    }).join('');
+    var cols='<cols>'+widths.map(function(w,i){return '<col min="'+(i+1)+'" max="'+(i+1)+'" width="'+w+'" customWidth="1"/>'}).join('')+'</cols>';
+    var NS='xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"';
+    var H='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n';
+    return zip([
+      {name:'[Content_Types].xml',data:H+'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>'},
+      {name:'_rels/.rels',data:H+'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'},
+      {name:'xl/workbook.xml',data:H+'<workbook '+NS+' xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="'+X(sheet)+'" sheetId="1" r:id="rId1"/></sheets></workbook>'},
+      {name:'xl/_rels/workbook.xml.rels',data:H+'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>'},
+      {name:'xl/styles.xml',data:H+'<styleSheet '+NS+'><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFF1F5FB"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>'},
+      {name:'xl/worksheets/sheet1.xml',data:H+'<worksheet '+NS+'><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>'+cols+'<sheetData>'+sd+'</sheetData><autoFilter ref="A1:'+last+n+'"/></worksheet>'}
+    ]);
+  }
+  return {make:make};
+})();
 function qRow(o){
-  var open=!!S.open[o.id];
+  var open=!!S.open[o.id],pend=o.status==='pending';
   var t=PLAN.tenures.filter(function(x){return x.m===o.tenure})[0]||PLAN.tenures[1];
   var det=open?'<div class="qd"><dl class="kv"><dt>Employee ID</dt><dd>'+esc(o.emp)+'</dd><dt>Email</dt><dd>'+esc(o.email)+'</dd><dt>Mobile</dt><dd>'+esc(o.phone)+'</dd><dt>City</dt><dd>'+esc(o.city)+'</dd>'+
     '<dt>Address</dt><dd>'+esc(o.address)+'</dd><dt>Plan</dt><dd>'+PLAN.name+', '+(o.plan||PLAN.speed)+' Mbps · '+t.m+' Months</dd><dt>Preferred slot</dt><dd>'+esc(o.slot||'Not specified')+'</dd><dt>Feasibility</dt><dd>Passed</dd></dl>'+
     '<div class="row"><button type="button" class="btn btn-primary btn-sm" data-action="map" data-addr="'+esc(o.address)+'">'+ico('pin')+' Map View</button></div></div>':'';
-  return '<div class="qr"><div class="q"><div><b>'+esc(o.id)+' · '+esc(o.name)+'</b>'+(o.sample?' <span class="chip">Sample</span>':'')+'<p class="muted" style="font-size:.88rem">'+esc(o.city)+' · feasible · '+o.when+'</p></div>'+
-    '<div class="row"><button type="button" class="btn btn-line btn-sm" data-action="toggle" data-id="'+esc(o.id)+'" aria-expanded="'+open+'">'+(open?'Hide Details':'View Details')+'</button>'+o.actions+'</div></div>'+det+'</div>';
+  var rsel='<select class="rsel" data-reason-for="'+esc(o.id)+'" aria-label="Rejection reason for '+esc(o.id)+'"><option value="">Default reason</option>'+REASONS.map(function(x){return '<option'+(S.rowReason[o.id]===x?' selected':'')+'>'+x+'</option>'}).join('')+'</select>';
+  var actions=pend?(o.live?rsel+'<button class="btn btn-green btn-sm" data-action="ob-approve">Approve</button><button class="btn btn-red btn-sm" data-action="ob-reject">Reject</button>':rsel+'<button class="btn btn-green btn-sm" data-action="seed" data-id="'+esc(o.id)+'" data-v="approved">Approve</button><button class="btn btn-red btn-sm" data-action="seed" data-id="'+esc(o.id)+'" data-v="rejected">Reject</button>'):'<span class="chip '+(o.status==='approved'?'g':'r')+'">'+(o.status==='approved'?'Approved':'Rejected')+'</span>'+(o.status==='rejected'&&o.reason?'<span class="muted rs-note">'+esc(o.reason)+'</span>':'');
+  var chk=pend?'<input type="checkbox" class="rowchk" data-action="sel-one" data-id="'+esc(o.id)+'" aria-label="Select '+esc(o.id)+' '+esc(o.name)+'"'+(S.pick[o.id]?' checked':'')+'>':'<span class="rowchk sp"></span>';
+  return '<div class="qr"><div class="q"><div class="ql">'+chk+'<div><b>'+esc(o.id)+' · '+esc(o.name)+'</b>'+(o.sample?' <span class="chip">Sample</span>':'')+'<p class="muted" style="font-size:.88rem">'+esc(o.city)+' · feasible · '+o.when+'</p></div></div>'+
+    '<div class="row"><button type="button" class="btn btn-line btn-sm" data-action="toggle" data-id="'+esc(o.id)+'" aria-expanded="'+open+'">'+(open?'Hide Details':'View Details')+'</button>'+actions+'</div></div>'+det+'</div>';
 }
 function openMap(addr,from){
   var m=$('#modal');m._from=from;
@@ -1677,29 +1875,91 @@ function downloadDoc(){
   }catch(err){toast('Could not create the PDF. Please try again.');if(window.console)console.error(err)}
 }
 
+
+function xlIco(){return '<svg class="ico xl" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="3" fill="#1d6f42"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M13 5v14M13 12h9" stroke="#fff" stroke-opacity=".45" stroke-width="1"/></svg>'}
+function donutSvg(parts,total,label,alt){
+  var R=62,C=2*Math.PI*R,off=0,seg='';
+  parts.forEach(function(p){if(!p.v)return;var len=C*p.v/total;seg+='<circle cx="90" cy="90" r="'+R+'" fill="none" stroke-width="26" style="stroke:'+p.c+'" stroke-dasharray="'+len.toFixed(2)+' '+(C-len).toFixed(2)+'" stroke-dashoffset="'+(-off).toFixed(2)+'" transform="rotate(-90 90 90)"/>';off+=len});
+  return '<svg viewBox="0 0 180 180" class="donut" role="img" aria-label="'+esc(alt)+'"><circle cx="90" cy="90" r="'+R+'" fill="none" stroke-width="26" style="stroke:var(--line)"/>'+seg+'<text x="90" y="88" text-anchor="middle" class="d-n">'+total+'</text><text x="90" y="108" text-anchor="middle" class="d-l">'+esc(label)+'</text></svg>';
+}
+function legend(items){return '<ul class="lg">'+items.map(function(i){return '<li><i style="background:'+i.c+'"></i>'+esc(i.l)+' <b>'+i.v+'</b></li>'}).join('')+'</ul>'}
+function pDashboard(){
+  var head=pageHead('<a href="#/">Home</a> / Admin Dashboard','Admin Dashboard','Summary of applications, feasibility rejections and approved and rejected connection requests. Includes sample history for demonstration.');
+  if(S.role!=='admin')return head+'<div class="page"><div class="wrap"><div class="panel info"><b>The dashboard is for admins.</b><p>Switch to Admin using the toggle at the right of the menu.</p><div><button type="button" class="btn btn-primary btn-sm" data-action="role" data-v="admin">Switch to Admin</button></div></div></div></div>';
+  var recs=allRecords(),feas=feasRecords(),n={approved:0,rejected:0,pending:0},cities={},reasons={},plans={};
+  var cityOf=function(k){return cities[k]||(cities[k]={approved:0,rejected:0,pending:0,feas:0})};
+  recs.forEach(function(x){
+    n[x.status]++;cityOf(x.city)[x.status]++;
+    if(x.status==='rejected'){var k=x.reason||'No reason given';reasons[k]=(reasons[k]||0)+1}
+    if(x.status==='approved'){var pk=x.plan+' Mbps';plans[pk]=(plans[pk]||0)+1}
+  });
+  feas.forEach(function(x){cityOf(x.city).feas++});
+  var reached=recs.length,nf=feas.length,applied=reached+nf,decided=n.approved+n.rejected,rate=decided?Math.round(n.approved*100/decided):0;
+  var G='var(--green)',R='var(--red)',A='#f5b800',O='#f47b20';
+  var pct=function(a,b){return b?Math.round(a*100/b):0};
+  var kpi=function(l,v,sub,c){return '<div class="kpi"><span class="muted">'+l+'</span><b style="color:'+(c||'var(--ink)')+'">'+v+'</b>'+(sub?'<small class="muted">'+sub+'</small>':'')+'</div>'};
+  var kpis='<div class="kpis">'+kpi('Applications',applied,'all cities')+kpi('Rejected in feasibility',nf,pct(nf,applied)+'% of applications','#c2570c')+kpi('Pending',n.pending,'awaiting admin','#b27a00')+kpi('Approved',n.approved,pct(n.approved,reached)+'% of reached admin',G)+kpi('Rejected by admin',n.rejected,pct(n.rejected,reached)+'% of reached admin',R)+kpi('Approval rate',rate+'%','approved of decided')+'</div>';
+  var names=Object.keys(cities).sort(function(a,b){var ca=cities[a],cb=cities[b];return (cb.approved+cb.rejected+cb.pending+cb.feas)-(ca.approved+ca.rejected+ca.pending+ca.feas)||a.localeCompare(b)});
+  var tot=function(c){return c.approved+c.rejected+c.pending};
+  var maxC=Math.max.apply(null,names.map(function(k){return tot(cities[k])}).concat([1]));
+  var cityBars=names.filter(function(k){return tot(cities[k])>0}).map(function(k){var c=cities[k];
+    return '<div class="hb"><span class="hb-l">'+esc(k)+'</span><div class="hb-t" role="img" aria-label="'+esc(k)+': '+c.approved+' approved, '+c.rejected+' rejected, '+c.pending+' pending"><i style="width:'+(c.approved/maxC*100)+'%;background:'+G+'"></i><i style="width:'+(c.rejected/maxC*100)+'%;background:'+R+'"></i><i style="width:'+(c.pending/maxC*100)+'%;background:'+A+'"></i></div><b class="hb-n">'+tot(c)+'</b></div>'}).join('');
+  var fnames=names.filter(function(k){return cities[k].feas>0}).sort(function(a,b){return cities[b].feas-cities[a].feas||a.localeCompare(b)});
+  var maxF=Math.max.apply(null,fnames.map(function(k){return cities[k].feas}).concat([1]));
+  var feasBars=fnames.length?fnames.map(function(k){return '<div class="hb"><span class="hb-l">'+esc(k)+'</span><div class="hb-t" role="img" aria-label="'+esc(k)+': '+cities[k].feas+' rejected in feasibility"><i style="width:'+(cities[k].feas/maxF*100)+'%;background:'+O+'"></i></div><b class="hb-n">'+cities[k].feas+'</b></div>'}).join('')+'<p class="muted" style="margin-top:10px;font-size:.88rem">Total <b style="color:var(--ink)">'+nf+'</b> applications rejected by the feasibility check.</p>':'<p class="muted">No feasibility rejections yet.</p>';
+  var fun=function(l,v,c){return '<div class="hb"><span class="hb-l wide">'+l+'</span><div class="hb-t"><i style="width:'+pct(v,applied)+'%;background:'+c+'"></i></div><b class="hb-n" style="width:auto">'+v+'</b></div>'};
+  var funnel=fun('Applications',applied,'var(--blue)')+fun('Passed feasibility',reached,G)+fun('Approved by admin',n.approved,'#0a5e44')+'<p class="muted" style="margin-top:10px;font-size:.88rem">'+pct(reached,applied)+'% pass feasibility. '+pct(n.approved,applied)+'% of applications are approved.</p>';
+  var rk=Object.keys(reasons).sort(function(a,b){return reasons[b]-reasons[a]}),maxR=Math.max.apply(null,rk.map(function(k){return reasons[k]}).concat([1]));
+  var reasonBars=rk.length?rk.map(function(k){return '<div class="hb"><span class="hb-l wide">'+esc(k)+'</span><div class="hb-t"><i style="width:'+(reasons[k]/maxR*100)+'%;background:'+R+'"></i></div><b class="hb-n">'+reasons[k]+'</b></div>'}).join(''):'<p class="muted">No rejections yet.</p>';
+  var pk2=Object.keys(plans).sort(),maxP=Math.max.apply(null,pk2.map(function(k){return plans[k]}).concat([1]));
+  var planBars=pk2.length?pk2.map(function(k){return '<div class="hb"><span class="hb-l">'+esc(k)+'</span><div class="hb-t"><i style="width:'+(plans[k]/maxP*100)+'%;background:var(--blue)"></i></div><b class="hb-n">'+plans[k]+'</b></div>'}).join(''):'<p class="muted">No approvals yet.</p>';
+  var lgd=[{l:'Approved',v:n.approved,c:G},{l:'Rejected by admin',v:n.rejected,c:R},{l:'Pending',v:n.pending,c:A}];
+  var donut=donutSvg([{v:n.approved,c:G},{v:n.rejected,c:R},{v:n.pending,c:A}],reached,'reached admin','Status split of requests that reached admin: '+n.approved+' approved, '+n.rejected+' rejected, '+n.pending+' pending');
+  var charts='<div class="charts">'+
+    '<section class="card chart"><h3>Application funnel</h3>'+funnel+'</section>'+
+    '<section class="card chart"><h3>Rejected in feasibility check, by city</h3>'+feasBars+'</section>'+
+    '<section class="card chart"><h3>Status split</h3><div class="dn">'+donut+legend(lgd)+'</div></section>'+
+    '<section class="card chart"><h3>Requests by city</h3>'+cityBars+legend(lgd)+'</section>'+
+    '<section class="card chart"><h3>Rejection reasons</h3>'+reasonBars+'</section>'+
+    '<section class="card chart"><h3>Approved connections by plan</h3>'+planBars+'</section></div>';
+  var rows=decidedRows();
+  var fchip=function(v,l,c){return '<button type="button" class="cf" data-action="dash-f" data-v="'+v+'" aria-pressed="'+(S.dashFilter===v)+'">'+l+' <b>'+c+'</b></button>'};
+  var sum={a:0,f:0,ap:0,rj:0,pd:0};
+  var cityRows=names.map(function(k){var c=cities[k],d=c.approved+c.rejected,ap=tot(c)+c.feas;sum.a+=ap;sum.f+=c.feas;sum.ap+=c.approved;sum.rj+=c.rejected;sum.pd+=c.pending;
+    return '<tr><td>'+esc(k)+'</td><td>'+ap+'</td><td>'+c.feas+'</td><td>'+c.approved+'</td><td>'+c.rejected+'</td><td>'+c.pending+'</td><td>'+(d?pct(c.approved,d)+'%':'-')+'</td></tr>'}).join('');
+  var totRow='<tr class="trow"><td>Total</td><td>'+sum.a+'</td><td>'+sum.f+'</td><td>'+sum.ap+'</td><td>'+sum.rj+'</td><td>'+sum.pd+'</td><td>'+rate+'%</td></tr>';
+  var cityTbl='<section class="card"><h3 style="margin-bottom:10px">City-wise summary</h3><div class="tbl-w"><table class="prd-t"><thead><tr><th>City</th><th>Applications</th><th>Rejected in feasibility</th><th>Approved</th><th>Rejected by admin</th><th>Pending</th><th>Approval rate</th></tr></thead><tbody>'+cityRows+totRow+'</tbody></table></div></section>';
+  var tr=rows.map(function(x){return '<tr><td><b>'+esc(x.id)+'</b></td><td>'+esc(x.name)+'</td><td>'+esc(x.city)+'</td><td>'+x.plan+' Mbps · '+x.tenure+(x.tenure===1?' month':' months')+'</td><td><span class="chip '+(x.status==='approved'?'g':'r')+'">'+(x.status==='approved'?'Approved':'Rejected')+'</span></td><td>'+esc(x.reason||'-')+'</td><td>'+esc(x.when)+'</td></tr>'}).join('');
+  var list='<section class="card"><div class="row" style="justify-content:space-between;margin-bottom:6px"><h3>Approved and rejected cases</h3></div><div class="cfs">'+fchip('all','All decided',decided)+fchip('approved','Approved',n.approved)+fchip('rejected','Rejected',n.rejected)+'</div><div class="tbl-w"><table class="prd-t"><thead><tr><th>Request</th><th>Employee</th><th>City</th><th>Plan</th><th>Decision</th><th>Rejection reason</th><th>Date</th></tr></thead><tbody>'+tr+'</tbody></table></div></section>';
+  return head+'<div class="page"><div class="wrap stack" style="gap:24px"><div class="dash-bar"><span class="muted">All cities, all statuses</span><button type="button" class="btn btn-line btn-sm" data-action="export-dash">'+xlIco()+' Export to Excel</button></div>'+kpis+charts+cityTbl+list+'</div></div>';
+}
 function pRequests(){
   var q='';
   if(S.role==='admin'){
-    var items=[];
-    if(S.ob&&S.ob.status==='ok'&&S.ob.step===6){var f=S.ob.form;
-      items.push({city:f.city,pending:true,html:qRow({id:S.ob.lead,name:f.name,city:f.city,when:'Just now',emp:f.emp,email:f.email,phone:f.phone,address:f.address,tenure:S.ob.tenure,plan:rp(S.ob).speed,slot:f.slot?fmtDate(f.slot.date)+' · '+f.slot.time:'',
-       actions:'<button class="btn btn-green btn-sm" data-action="ob-approve">Approve</button><button class="btn btn-red btn-sm" data-action="ob-reject">Reject</button>'})});}
-    S.seeds.forEach(function(x){
-      items.push({city:x.city,pending:x.status==='pending',html:qRow({id:x.id,name:x.name,city:x.city,when:x.when,emp:x.emp,email:x.email,phone:x.phone,address:x.address,tenure:x.tenure,plan:x.plan,slot:x.slot,sample:1,
-       actions:x.status==='pending'?'<button class="btn btn-green btn-sm" data-action="seed" data-id="'+x.id+'" data-v="approved">Approve</button><button class="btn btn-red btn-sm" data-action="seed" data-id="'+x.id+'" data-v="rejected">Reject</button>':'<span class="chip '+(x.status==='approved'?'g':'r')+'">'+(x.status==='approved'?'Approved':'Rejected')+'</span>'})});
-    });
-    var cities={};items.forEach(function(it){var c=cities[it.city]||(cities[it.city]={n:0,p:0,h:''});c.n++;if(it.pending)c.p++;c.h+=it.html});
+    var recs=adminRecords(),cities={};
+    recs.forEach(function(x){var c=cities[x.city]||(cities[x.city]={n:0,p:0,h:'',ids:[]});c.n++;if(x.status==='pending'){c.p++;c.ids.push(x.id)}c.h+=qRow(x)});
     var names=Object.keys(cities).sort(function(x,y){return cities[y].p-cities[x].p||x.localeCompare(y)});
     var totalP=names.reduce(function(t,n){return t+cities[n].p},0);
     var cf=cities[S.cityFilter]?S.cityFilter:'All';
     var chips='<div class="cfs" role="group" aria-label="Filter by city"><button type="button" class="cf" data-action="city-f" data-v="All" aria-pressed="'+(cf==='All')+'">All Cities <b>'+totalP+'</b></button>'+names.map(function(n){return '<button type="button" class="cf" data-action="city-f" data-v="'+esc(n)+'" aria-pressed="'+(cf===n)+'">'+esc(n)+' <b>'+cities[n].p+'</b></button>'}).join('')+'</div>';
-    var groups=names.filter(function(n){return cf==='All'||n===cf}).map(function(n){var c=cities[n];return '<section class="cg" aria-label="'+esc(n)+'"><div class="cg-h"><h3>'+esc(n)+'</h3><span class="chip o">'+c.p+' pending</span><span class="muted" style="font-size:.85rem">'+c.n+' request'+(c.n===1?'':'s')+'</span></div>'+c.h+'</section>'}).join('');
-    q='<section class="card"><h2 style="margin-bottom:6px">Admin Approval Pendency</h2><p class="muted">'+totalP+' connection request'+(totalP===1?'':'s')+' pending across '+names.length+' cit'+(names.length===1?'y':'ies')+'. Only requests that passed the feasibility check appear here.</p>'+chips+'<div style="margin-top:6px">'+groups+'</div></section><input type="hidden" id="adm-reason" value="Not eligible under Deloitte policy">';
+    var shown=names.filter(function(n){return cf==='All'||n===cf});
+    var visIds=[];shown.forEach(function(n){visIds=visIds.concat(cities[n].ids)});
+    var selIds=recs.filter(function(x){return x.status==='pending'&&S.pick[x.id]}).map(function(x){return x.id});
+    var visSel=visIds.filter(function(id){return S.pick[id]}).length;
+    var allOn=visIds.length>0&&visSel===visIds.length,some=visSel>0&&!allOn;
+    var bulk='<div class="bulk" role="group" aria-label="Bulk actions"><label class="selall"><input type="checkbox" data-action="sel-all"'+(allOn?' checked':'')+(some?' data-indet="1"':'')+(visIds.length?'':' disabled')+'> <b>Select all'+(cf==='All'?'':' in '+esc(cf))+'</b></label><span class="muted" style="font-size:.88rem">'+selIds.length+' selected</span>'+
+      '<label class="muted" for="adm-reason" style="font-size:.82rem">Default reason</label><select id="adm-reason">'+REASONS.map(function(x){return '<option'+(x===S.reason?' selected':'')+'>'+x+'</option>'}).join('')+'</select>'+
+      '<button type="button" class="btn btn-green btn-sm" data-action="bulk" data-v="approved"'+(selIds.length?'':' disabled')+'>Approve Selected</button><button type="button" class="btn btn-red btn-sm" data-action="bulk" data-v="rejected"'+(selIds.length?'':' disabled')+'>Reject Selected</button>'+
+      '</div>';
+    var groups=shown.map(function(n){var c=cities[n],on=c.p>0&&c.ids.every(function(id){return S.pick[id]}),part=!on&&c.ids.some(function(id){return S.pick[id]});
+      return '<section class="cg" aria-label="'+esc(n)+'"><div class="cg-h"><h3>'+esc(n)+'</h3><span class="chip o">'+c.p+' pending</span><span class="muted" style="font-size:.85rem">'+c.n+' request'+(c.n===1?'':'s')+'</span>'+
+        '<label class="cg-sel"><input type="checkbox" data-action="sel-city" data-city="'+esc(n)+'"'+(on?' checked':'')+(part?' data-indet="1"':'')+(c.p?'':' disabled')+'> Select all in '+esc(n)+'</label></div>'+c.h+'</section>'}).join('');
+    q='<section class="card"><h2 style="margin-bottom:6px">Admin Approval Pendency</h2><p class="muted">'+totalP+' connection request'+(totalP===1?'':'s')+' pending across '+names.length+' cit'+(names.length===1?'y':'ies')+'. Only requests that passed the feasibility check appear here.</p>'+chips+bulk+'<div style="margin-top:6px">'+groups+'</div></section>';
   }
   var ob=S.ob?'<section class="card"><h2 style="margin-bottom:10px">Connection request</h2><div class="q"><div><b>'+(S.ob.lead||'Submitting')+'</b> · '+esc(S.ob.form.name)+'<p class="muted" style="font-size:.88rem">'+esc(S.ob.form.city)+'</p></div><a class="btn btn-line btn-sm" href="#/onboarding">Open</a></div></section>':'';
   var tk=S.tickets.length?'<section class="stack" style="gap:12px"><h2>Service tickets</h2>'+S.tickets.map(ticketCard).join('')+'</section>':'';
   var empty=(!S.ob&&!S.tickets.length&&S.role!=='admin')?'<div class="empty"><h3>No requests yet</h3><p class="muted">Start a connection or raise a ticket and it shows up here.</p><div class="row"><a class="btn btn-primary btn-sm" href="#/onboarding">New Connection</a><a class="btn btn-line btn-sm" href="#/existing">Existing User</a></div></div>':'';
-  return pageHead('<a href="#/">Home</a> / Requests','Requests','Everything raised from this portal, with its current stage.')+'<div class="page"><div class="wrap stack" style="max-width:860px">'+q+ob+tk+empty+'</div></div>';
+  return pageHead('<a href="#/">Home</a> / Requests','Requests','Everything raised from this portal, with its current stage.')+'<div class="page"><div class="wrap stack" style="'+(S.role==='admin'?'':'max-width:860px')+'">'+q+ob+tk+empty+'</div></div>';
 }
 
 /* ---------- Workflow: walkthrough deck of wireframes ---------- */
@@ -1711,10 +1971,10 @@ var wbtn=function(t,st){return wbx('or',t,st)};
 var wr=function(i,st){return '<div class="wr" style="'+(st||'')+'">'+i+'</div>'};
 var wc=function(i,st){return '<div class="wc" style="'+(st||'')+'">'+i+'</div>'};
 var wh=function(t,st){return '<div class="wh" style="'+(st||'')+'">'+t+'</div>'};
-function wnav(a){
-  return '<div class="wf-nav"><span class="lg">ACT × Deloitte</span>'+['Home','New Onboarding','Existing User','Helpdesk','Requests'].map(function(n){return '<span class="'+(n===a?'on':'')+'">'+n+'</span>'}).join('')+'<span class="rl">User | Admin</span></div>';
+function wnav(a,adm){
+  return '<div class="wf-nav"><span class="lg">ACT × Deloitte</span>'+['Home','New Onboarding','Existing User','Helpdesk','Requests'].concat(adm?['Dashboard']:[]).map(function(n){return '<span class="'+(n===a?'on':'')+'">'+n+'</span>'}).join('')+'<span class="rl">User | Admin</span></div>';
 }
-function wf(url,a,body,h){return '<div class="wf" style="height:'+h+'px"><div class="wf-top"><i></i><i></i><i></i><span class="wf-url">'+url+'</span></div>'+wnav(a)+'<div class="wf-body">'+body+'</div></div>'}
+function wf(url,a,body,h,adm){return '<div class="wf" style="height:'+h+'px"><div class="wf-top"><i></i><i></i><i></i><span class="wf-url">'+url+'</span></div>'+wnav(a,adm)+'<div class="wf-body">'+body+'</div></div>'}
 function wsteps(list,cur){return list.map(function(t,i){return '<div class="wr" style="align-items:center;gap:7px"><span class="wn'+(i===cur?' on':'')+'">'+(i+1)+'</span><span>'+t+'</span></div>'}).join('')}
 function wmap(h){return '<div style="height:'+h+'px;border-radius:6px;position:relative;background:repeating-linear-gradient(0deg,#dfe5f2 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,#dfe5f2 0 1px,transparent 1px 22px),#f2f5fb"><span class="pin"></span></div>'}
 function wcal(){
@@ -1749,14 +2009,16 @@ function wfOnb(){
   var tr=wbx('dash','<div class="tag-d">For discussion only · to be removed</div>'+wc(wsteps(['Employee submits request','Lead created','Auto feasibility check','Feasible?','Visible to Deloitte admin','Admin approves?','Assigned to an SE','KYC and documentation','Payment','Work order generated','NE confirms & visits'],-1)+wr('<span class="wn gr">✓</span><span>Installation completed</span>','align-items:center;gap:7px'),'gap:6px;margin-top:6px'),'flex:1;font-size:11px');
   return wf('portal / new-onboarding','New Onboarding',wr(form+tr,'gap:12px'),556);
 }
+var wcb=function(on){return '<span class="wcb'+(on?' on':'')+'"></span>'};
+var wbulk=function(n){return wr(wr(wcb(n>0)+'<b style="color:#16233f">Select all</b>','align-items:center;gap:5px')+'<span>'+n+' selected</span>'+wbx('gr','Approve Selected','padding:2px 7px')+wbx('','Reject Selected','padding:2px 7px;color:#c53030;border-color:#c53030'),'align-items:center;gap:7px;padding:6px 8px;border:1.5px solid #dbe2ef;border-radius:8px;background:#f2f5fb;margin:6px 0 2px;font-size:10px')};
 function wfAdmin(){
   var chips=wr([['All Cities 7',1],['Hyderabad 2'],['Bengaluru 2'],['Chennai 2'],['Pune 1']].map(function(c){return wbx(c[1]?'sel':'pl','<b>'+c[0]+'</b>','padding:3px 8px;border-radius:999px')}).join(''),'gap:6px;margin:6px 0 2px;flex-wrap:wrap');
-  var grp=function(c,n){return '<div class="wr" style="align-items:center;gap:8px;margin-top:8px;padding-bottom:4px;border-bottom:2px solid #dbe2ef"><b style="font:700 13px Poppins;color:#16233f">'+c+'</b><span class="tg" style="background:#fff0e6;color:#d24b07">'+n+' pending</span></div>'};
-  var row=function(id,nm,city,when){return wr(wc('<b style="color:#16233f">'+id+' · '+nm+'</b><span>'+city+' · feasible · '+when+'</span>','flex:1')+wbx('','View Details','padding:3px 8px')+wbx('gr','Approve','padding:3px 8px')+wbx('','Reject','padding:3px 8px;color:#c53030;border-color:#c53030'),'align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid #e3e8f3')};
+  var grp=function(c,n){return '<div class="wr" style="align-items:center;gap:8px;margin-top:6px;padding-bottom:3px;border-bottom:2px solid #dbe2ef"><b style="font:700 13px Poppins;color:#16233f">'+c+'</b><span class="tg" style="background:#fff0e6;color:#d24b07">'+n+' pending</span><span class="wr" style="margin-left:auto;gap:4px;align-items:center;font-size:10px">'+wcb(1)+' Select all in '+c+'</span></div>'};
+  var row=function(id,nm,city,when){return wr(wcb(1)+wc('<b style="color:#16233f">'+id+' · '+nm+'</b><span>'+city+' · feasible · '+when+'</span>','flex:1')+wbx('','View Details','padding:3px 8px')+wbx('','Reason ▾','padding:3px 6px')+wbx('gr','Approve','padding:3px 8px')+wbx('','Reject','padding:3px 8px;color:#c53030;border-color:#c53030'),'align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid #e3e8f3')};
   var det=wbx('','<div class="kvw"><span>Employee ID</span><b>HYD-20417</b><span>Address</span><b>Plot 56, Road No. 36, Jubilee Hills</b><span>Plan</span><b>Deloitte Employee Plan · 6 Months</b><span>Preferred slot</span><b>Sat, 10 Oct · 10:00 am – 11:00 am</b></div>'+wbtn('Map View','margin-top:6px;width:90px;padding:3px'),'margin:4px 0;padding:6px 8px');
   var modal='<div class="mdl" style="width:290px"><div class="wr" style="justify-content:space-between;align-items:center;margin-bottom:6px"><b style="color:#16233f">Map View</b><span class="wr" style="gap:5px"><span class="bx" style="padding:2px 6px">Open in Google Maps</span><span class="bx or" style="padding:2px 6px">Close</span></span></div>'+wmap(110)+'</div>';
-  var body=wc(wh('Requests','font-size:16px')+wbx('pl',wh('Admin Approval Pendency','font-size:13px')+'<div>7 pending across 4 cities</div>'+chips+grp('Hyderabad',2)+row('LD-2212','Sai Prakash','Hyderabad','Today, 11:05 am')+row('LD-2210','Meera Iyer','Hyderabad','Today, 9:40 am')+det+grp('Bengaluru',2)+row('LD-2211','Divya Nair','Bengaluru','Today, 10:20 am')+grp('Chennai',2)+row('LD-2208','Karthik S.','Chennai','Yesterday'),'padding:8px 12px'),'gap:6px');
-  return wf('portal / requests (admin view)','Requests',body+modal,556);
+  var body=wc(wh('Requests','font-size:16px')+wbx('pl',wh('Admin Approval Pendency','font-size:13px')+'<div>7 pending across 4 cities</div>'+chips+wbulk(2)+grp('Hyderabad',2)+row('LD-2212','Sai Prakash','Hyderabad','Today, 11:05 am')+row('LD-2210','Meera Iyer','Hyderabad','Today, 9:40 am')+det+grp('Bengaluru',2)+row('LD-2211','Divya Nair','Bengaluru','Today, 10:20 am'),'padding:8px 12px'),'gap:6px');
+  return wf('portal / requests (admin view)','Requests',body+modal,556,true);
 }
 function wfHub(){
   var card=function(t,items){return wbx('pl',wh(t,'font-size:13px;margin:6px 0')+items.map(function(x){return '<div class="lk">'+x+' →</div>'}).join(''),'flex:1;height:200px')};
@@ -1784,17 +2046,29 @@ function wfReq(){
 }
 function wfReqAdmin(){
   var chips=wr([['All Cities 7',1],['Hyderabad 2'],['Bengaluru 2'],['Chennai 2'],['Pune 1']].map(function(c){return wbx(c[1]?'sel':'pl','<b>'+c[0]+'</b>','padding:3px 8px;border-radius:999px')}).join(''),'gap:6px;margin:6px 0 2px;flex-wrap:wrap');
-  var grp=function(c,n){return '<div class="wr" style="align-items:center;gap:8px;margin-top:6px;padding-bottom:3px;border-bottom:2px solid #dbe2ef"><b style="font:700 13px Poppins;color:#16233f">'+c+'</b><span class="tg" style="background:#fff0e6;color:#d24b07">'+n+' pending</span></div>'};
-  var row=function(id,nm,city,when){return wr(wc('<b style="color:#16233f">'+id+' · '+nm+'</b><span>'+city+' · feasible · '+when+'</span>','flex:1')+wbx('','View Details','padding:3px 8px')+wbx('gr','Approve','padding:3px 8px')+wbx('','Reject','padding:3px 8px;color:#c53030;border-color:#c53030'),'align-items:center;gap:6px;padding:5px 0;border-bottom:1px solid #e3e8f3')};
+  var grp=function(c,n){return '<div class="wr" style="align-items:center;gap:8px;margin-top:6px;padding-bottom:3px;border-bottom:2px solid #dbe2ef"><b style="font:700 13px Poppins;color:#16233f">'+c+'</b><span class="tg" style="background:#fff0e6;color:#d24b07">'+n+' pending</span><span class="wr" style="margin-left:auto;gap:4px;align-items:center;font-size:10px">'+wcb(0)+' Select all in '+c+'</span></div>'};
+  var row=function(id,nm,city,when){return wr(wcb(0)+wc('<b style="color:#16233f">'+id+' · '+nm+'</b><span>'+city+' · feasible · '+when+'</span>','flex:1')+wbx('','View Details','padding:3px 8px')+wbx('','Reason ▾','padding:3px 6px')+wbx('gr','Approve','padding:3px 8px')+wbx('','Reject','padding:3px 8px;color:#c53030;border-color:#c53030'),'align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid #e3e8f3')};
   var stg=function(a){return '<div class="stg">'+['Logged','Assigned to field team','Technician on the way','Resolved'].map(function(s,i){return '<span class="'+(i<a?'d':i===a?'c':'')+'">'+s+'</span>'}).join('')+'</div>'};
-  var top=wbx('pl',wh('Admin Approval Pendency','font-size:13px')+'<div>7 pending across 4 cities</div>'+chips+grp('Hyderabad',2)+row('LD-2212','Sai Prakash','Hyderabad','Today, 11:05 am')+grp('Pune',1)+row('LD-2206','Amit Deshpande','Pune','Wed, 7 Oct'),'padding:8px 12px;border:2px solid #c98a00');
+  var top=wbx('pl',wh('Admin Approval Pendency','font-size:13px')+'<div>7 pending across 4 cities</div>'+chips+wbulk(0)+grp('Hyderabad',2)+row('LD-2212','Sai Prakash','Hyderabad','Today, 11:05 am')+grp('Pune',1)+row('LD-2206','Amit Deshpande','Pune','Wed, 7 Oct'),'padding:8px 12px;border:2px solid #c98a00');
   var mine=wbx('pl',wh('Connection request')+'<div class="wr" style="justify-content:space-between;align-items:center;margin-top:3px"><span>LD-4821 · Anil Kumar · Hyderabad</span><span class="bx" style="padding:2px 8px">Open</span></div>','padding:8px 10px');
   var tk=wbx('pl','<div class="wr" style="justify-content:space-between"><b style="color:#16233f">FR-1041 · Internet Downtime</b><span class="tg">In progress</span></div>'+stg(1),'padding:8px 10px');
   var note='<div class="tag-d" style="justify-self:start">Admin only</div>';
-  return wf('portal / requests (admin view)','Requests',wc(wh('Requests','font-size:16px')+note+top+wh('Also shown, as in the user view','margin-top:2px;color:#56637f')+mine+tk,'gap:7px'),556);
+  return wf('portal / requests (admin view)','Requests',wc(wh('Requests','font-size:16px')+note+top+wh('Also shown, as in the user view','margin-top:2px;color:#56637f')+mine+tk,'gap:7px'),596,true);
+}
+function wfDash(){
+  var kp=function(l,v,c){return wbx('pl','<div style="font-size:9.5px">'+l+'</div><div style="font:700 20px Poppins;color:'+(c||'#16233f')+'">'+v+'</div>','flex:1;padding:6px 8px')};
+  var kpis=wr(kp('Applications',37)+kp('Failed feasibility',16,'#c2570c')+kp('Pending',7,'#b27a00')+kp('Approved',10,'#0c7f5c')+kp('Rejected',4,'#c53030')+kp('Approval rate','71%'),'gap:6px');
+  var donut=wbx('pl',wh('Status split')+'<div class="wr" style="gap:12px;align-items:center;margin-top:8px"><div class="wdn"><b>21</b></div><div class="wc" style="gap:5px;font-size:10px"><span><i class="ld" style="background:#0c7f5c"></i>Approved 10</span><span><i class="ld" style="background:#c53030"></i>Rejected 4</span><span><i class="ld" style="background:#f5b800"></i>Pending 7</span></div></div>','flex:1;padding:9px 10px');
+  var bar=function(l,a,r_,pd){return '<div class="wr" style="align-items:center;gap:6px;margin-top:6px;font-size:10px"><span style="width:62px;font-weight:800;color:#16233f">'+l+'</span><div class="wr" style="flex:1;height:10px;border-radius:5px;overflow:hidden;background:#f2f5fb"><i style="width:'+a+'%;background:#0c7f5c"></i><i style="width:'+r_+'%;background:#c53030"></i><i style="width:'+pd+'%;background:#f5b800"></i></div></div>'};
+  var city=wbx('pl',wh('Requests by city')+bar('Hyderabad',40,10,20)+bar('Bengaluru',30,10,20)+bar('Chennai',20,10,20)+bar('Pune',10,10,10),'flex:1.3;padding:9px 10px');
+  var rs=function(l,w,c){return '<div class="wr" style="align-items:center;gap:6px;margin-top:6px;font-size:10px"><span style="width:92px">'+l+'</span><div class="wr" style="flex:1;height:10px;border-radius:5px;background:#f2f5fb"><i style="width:'+w+'%;background:'+(c||'#c53030')+';border-radius:5px"></i></div></div>'};
+  var reasons=wbx('pl',wh('Rejection reasons')+rs('Duplicate request',80)+rs('Details need correction',60)+rs('Not eligible',40)+rs('Other',20),'flex:1;padding:9px 10px');
+  var row=function(id,nm,c,d,why){return '<div class="wr" style="gap:8px;padding:4px 0;border-top:1px solid #e3e8f3;font-size:10px"><b style="width:52px;color:#16233f">'+id+'</b><span style="width:80px">'+nm+'</span><span style="width:62px">'+c+'</span><span class="tg" style="'+(d==='Rejected'?'background:#fdecec;color:#c53030':'')+'">'+d+'</span><span style="flex:1;text-align:right">'+why+'</span></div>'};
+  var list=wbx('pl','<div class="wr" style="justify-content:space-between;align-items:center">'+wh('Approved and rejected cases')+'</div>'+row('LD-2199','Rohan K.','Pune','Approved','-')+row('LD-2189','Kiran K.','Hyderabad','Rejected','Duplicate request')+row('LD-2188','Harish G.','Bengaluru','Rejected','Details need correction'),'padding:9px 10px');
+  return wf('portal / admin-dashboard','Dashboard',wc('<div class="wr" style="justify-content:space-between;align-items:center">'+wh('Admin Dashboard','font-size:16px')+wbx('','<span class="wxl"></span> Export to Excel','padding:3px 8px;display:flex;align-items:center;gap:5px')+'</div>'+kpis+wr(donut+city,'gap:8px')+wr(reasons+wbx('pl',wh('Rejected in feasibility, by city')+rs('Other cities',90,'#f47b20')+rs('Chennai',72,'#f47b20')+rs('Hyderabad',54,'#f47b20')+rs('Pune',36,'#f47b20'),'flex:1;padding:9px 10px'),'gap:8px')+list,'gap:8px'),556,true);
 }
 function wfTree(){
-  var top=['Home','New Onboarding','Existing User','Helpdesk','Requests'];
+  var top=['Home','New Onboarding','Existing User','Helpdesk','Requests','Dashboard'];
   var kids={'Existing User':['Service Requests','Account Management','Offboarding']};
   var cols=top.map(function(t){return '<div class="tcol">'+wbx(t==='Existing User'?'nv':'pl',wh(t,t==='Existing User'?'color:#fff':''),'text-align:center;padding:9px 4px')+(kids[t]?'<div class="tkids">'+kids[t].map(function(k){return wbx('','<span>'+k+'</span>','text-align:center;padding:7px 3px;font-size:11px')}).join('')+'</div>':'')+'</div>'}).join('');
   return '<div class="tree"><div class="bx or" style="width:230px;margin:0 auto;padding:10px;font-size:14px">ACT × Deloitte Portal</div><div class="tbar"></div><div class="wr" style="gap:8px;align-items:flex-start">'+cols+'</div>'+
@@ -1817,19 +2091,20 @@ function buildSlides(){
   var sl=function(kick,title,pts,wire){return {html:'<div class="sl-l"><div class="sl-k">'+kick+'</div><h2>'+title+'</h2><ul>'+pts.map(function(p){return '<li>'+p+'</li>'}).join('')+'</ul></div><div class="sl-r">'+wire+'</div>'}};
   var S_=[];
   S_.push({t:'Title',cls:'ttl',html:'<div class="ttl-in"><div class="ttl-logos"><img src="'+lg[0]+'" alt="ACT"><span>×</span><img src="'+lg[1]+'" alt="Deloitte"></div><h1>Employee Connectivity Portal</h1><p>One portal for the full lifecycle of a Deloitte employee\'s ACT broadband connection: onboarding, service, account changes, offboarding and helpdesk.</p><div class="ttl-tags"><span>Onboarding</span><span>Service Requests</span><span>Account Management</span><span>Offboarding</span><span>Helpdesk</span></div><div class="ttl-n">Prototype walkthrough · for discussion</div></div>'});
-  var a=sl('01 · Structure','One portal, two views',['Five sections in the top menu, from onboarding to requests.','<b>User</b> view for employees: apply, raise tickets, track and escalate.','<b>Admin</b> view for the Deloitte authorised signatory: approve new connections city-wise and review request details.','Switch views with the toggle at the far right of the menu, at any time.'],wfTree());a.t='Structure';S_.push(a);
+  var a=sl('01 · Structure','One portal, two views',['Five sections in the top menu, from onboarding to requests, plus a Dashboard for admins.','<b>User</b> view for employees: apply, raise tickets, track and escalate.','<b>Admin</b> view for the Deloitte authorised signatory: approve new connections city-wise and review request details.','Switch views with the toggle at the far right of the menu, at any time.'],wfTree());a.t='Structure';S_.push(a);
   a=sl('02 · Home','Everything starts here',['The lifecycle line links straight to Onboarding, Service Requests, Account Management and Offboarding.','Three entry cards cover new onboarding, existing user and the helpdesk.','Two compact cards show the 200 Mbps and 500 Mbps employee plans.'],wfHome());a.t='Home';S_.push(a);
   a=sl('03 · New Onboarding','Request a connection',['Employee details and the installation address. The address text decides whether a Retail or Community SE is assigned.','Optional preferred installation slot: pick a date, then an hourly slot in the First Half or Second Half.','Choose a 200 or 500 Mbps plan, then a tenure, and see the total payable.','The flow on the right is marked for discussion only and will be removed.'],wfOnb());a.t='New Onboarding';S_.push(a);
   S_.push({t:'Onboarding journey',cls:'full',html:flowSlide()});
-  a=sl('05 · Admin approval','Approve city by city',['<b>Admin Approval Pendency</b> lists requests that passed ACT feasibility, grouped city-wise with a pending count.','Filter by city chips when connections arrive from many cities.','Expand a request to see employee, address, plan and preferred slot.','<b>Map View</b> opens the address on Google Maps inside the page.','Approve to continue, or reject with a reason that goes back to the employee.'],wfAdmin());a.t='Admin approval';S_.push(a);
+  a=sl('05 · Admin approval','Approve city by city',['<b>Admin Approval Pendency</b> lists requests that passed ACT feasibility, grouped city-wise with a pending count.','Filter by city chips when connections arrive from many cities.','Expand a request to see employee, address, plan and preferred slot.','<b>Map View</b> opens the address on Google Maps inside the page.','<b>Select all</b> per city or overall for bulk approve or reject.'],wfAdmin());a.t='Admin approval';S_.push(a);
   a=sl('06 · Existing user','Choose what you need',['Service Requests for faults.','Account Management for changes to a live connection.','Offboarding for leaving or pausing.','Every request gets a ticket ID, a first-response time and a TAT.'],wfHub());a.t='Existing user';S_.push(a);
   a=sl('07 · Service Requests','Report and fix faults',['Internet Downtime and Slow Speeds, each with its own questions.','The ticket shows its TAT and a resolve-by time.','"Try this first" tips can save a visit.','A copy goes to the Deloitte admin and the central support desk.'],wfSvc('portal / existing-user / service-requests',['Internet Downtime','Slow Speeds'],0,[['ACT account ID or mobile','Deloitte employee ID'],['Contact number','Alternate contact'],'What lights do you see on the router?',['When did it start?','Preferred visit slot'],'Anything else (optional)'],wkv(['Committed times',['First response: 30 min','TAT: 4 hrs']])+wkv(['Try this first',['Check router power','Restart for 30 seconds','Note any red light']]),'Raise Service Request'));a.t='Service Requests';S_.push(a);
   a=sl('08 · Account Management','Change a live connection',['<b>Safe Custody</b> pauses service between two dates.','<b>Shifting</b> moves the connection to a new address after a feasibility check.','<b>Reconnection</b> restarts a paused line.','The form fields change with the request type.'],wfSvc('portal / existing-user / account-management',['Safe Custody','Shifting','Reconnection'],1,[['ACT account ID or mobile','Deloitte employee ID'],['Contact number','Alternate contact'],'New address',['City','Preferred shifting date']],wkv(['Committed times',['First response: 4 hrs','TAT: 72 hrs']])+wkv(['How it works',['Feasibility check on new address','Technician visit at new place']]),'Submit Request'));a.t='Account Management';S_.push(a);
   a=sl('09 · Offboarding','Close or pause cleanly',['<b>Suspension</b> for a temporary stop.','<b>Disconnection</b> to close the account on a set date.','<b>Router Recovery</b> books a pickup of ACT equipment.','"What happens next" shows each step up to the final bill or recovery.'],wfSvc('portal / existing-user / offboarding',['Suspension','Disconnection','Router Recovery'],1,[['ACT account ID or mobile','Deloitte employee ID'],['Contact number','Alternate contact'],['Disconnect on','Reason'],'I understand pending dues are settled in the final bill'],wkv(['Committed times',['First response: 4 hrs','TAT: 72 hrs']])+wkv(['What happens next',['ACT checks dues and equipment','Line disconnected on set date','Router recovery scheduled','Final bill issued']]),'Submit Request'));a.t='Offboarding';S_.push(a);
   a=sl('10 · Helpdesk','One central desk, clear escalation',['Central desk contacts for Deloitte and ACT coordination.','Four-level escalation matrix, L1 to L4, tied to TAT.','TAT table by category, starting with New Onboarding.','Escalation form with category and sub-category.'],wfHelp());a.t='Helpdesk';S_.push(a);
   a=sl('11 · Requests <span class="vtag u">User view</span>','Track everything you raised',['Your <b>connection request</b> appears first, with <b>Open</b> to return to its live status.','Every fault, account change, offboarding request and escalation becomes a <b>ticket card</b> with a four-stage tracker.','The resolve-by time comes from the ticket\'s TAT.','<b>Move to Next Stage</b> is a prototype stand-in for ACT updating the ticket.'],wfReq());a.t='Requests (User)';S_.push(a);
-  a=sl('12 · Requests <span class="vtag a">Admin view</span>','Approve first, then the same view',['<b>Admin Approval Pendency</b> sits on top: new connections that passed feasibility, grouped by city with filter chips.','<b>Approve</b> moves a request to engineer assignment, KYC and payment. <b>Reject</b> ends it and notifies the employee.','Below that, the admin sees their own requests and tickets, as a user does.','<i>Not built yet:</i> admin view of all employees\' tickets, and separate User and Admin logins.'],wfReqAdmin());a.t='Requests (Admin)';S_.push(a);
-  S_.push({t:'Next Steps',cls:'full',html:'<div class="sl-full"><div class="sl-k">13 · Before go-live</div><h2>Next Steps</h2><div class="two-c"><div class="nx"><h3>Business Confirmation Pending</h3><ul><li>Plan name, speed, price and tenure options</li><li>TAT and first-response values per request type</li><li>Escalation names, numbers and emails; central desk contacts</li><li>Billing mode: Prepaid or Postpaid</li><li>Rules for safe custody, shifting and reconnection</li></ul></div><div class="nx"><h3>Technical Integration Pending</h3><ul><li>ACT server for lead creation and feasibility</li><li>Deloitte admin and signatory directory</li><li>KYC, documentation and payment gateway</li><li>Work order assignment to NE - flow integration</li></ul></div></div></div>'});
+  a=sl('12 · Requests <span class="vtag a">Admin view</span>','Approve first, then the same view',['<b>Admin Approval Pendency</b> sits on top: new connections that passed feasibility, grouped by city with filter chips.','<b>Approve</b> moves a request to engineer assignment, KYC and payment. <b>Reject</b> ends it and notifies the employee. Each case has its own rejection reason. Select several, or <b>Select all</b>, to act in bulk.','Below that, the admin sees their own requests and tickets, as a user does.','<i>Not built yet:</i> admin view of all employees\' tickets, and separate User and Admin logins.'],wfReqAdmin());a.t='Requests (Admin)';S_.push(a);
+  a=sl('13 · Admin dashboard <span class="vtag a">Admin view</span>','See every decision at a glance',['<b>Dashboard</b> appears in the menu for admins only.','KPIs for applications, feasibility rejections, pending, approved and rejected requests, and the approval rate.','Applications rejected in the feasibility check, in total and by city.','Charts for the funnel, status split, requests by city, rejection reasons and approved plans.','A list of all approved and rejected cases with each rejection reason, filterable by decision.','<b>Export to Excel</b> on the dashboard downloads all request data.'],wfDash());a.t='Admin dashboard';S_.push(a);
+  S_.push({t:'Next Steps',cls:'full',html:'<div class="sl-full"><div class="sl-k">14 · Before go-live</div><h2>Next Steps</h2><div class="two-c"><div class="nx"><h3>Business Confirmation Pending</h3><ul><li>Plan name, speed, price and tenure options</li><li>TAT and first-response values per request type</li><li>Escalation names, numbers and emails; central desk contacts</li><li>Billing mode: Prepaid or Postpaid</li><li>Rules for safe custody, shifting and reconnection</li></ul></div><div class="nx"><h3>Technical Integration Pending</h3><ul><li>ACT server for lead creation and feasibility</li><li>Deloitte admin and signatory directory</li><li>KYC, documentation and payment gateway</li><li>Work order assignment to NE - flow integration</li></ul></div></div></div>'});
   return S_;
 }
 function slideInner(sl,i){
@@ -1873,7 +2148,7 @@ function fitDeck(){
 }
 
 /* ---------- render ---------- */
-var PAGES={home:pHome,onboarding:pOnboarding,existing:pExisting,'existing/fault':pFault,'existing/account':pAccount,'existing/offboard':pOffboard,helpdesk:pHelp,requests:pRequests,workflow:pWorkflow};
+var PAGES={home:pHome,onboarding:pOnboarding,existing:pExisting,'existing/fault':pFault,'existing/account':pAccount,'existing/offboard':pOffboard,helpdesk:pHelp,requests:pRequests,dashboard:pDashboard,workflow:pWorkflow};
 function saveDrafts(){$$('form[id]').forEach(function(f){var d={};$$('input,select,textarea',f).forEach(function(el){if(!el.name)return;if(el.type==='checkbox')d[el.name]=el.checked;else d[el.name]=el.value});S.drafts[f.id]=d})}
 function restoreDrafts(){$$('form[id]').forEach(function(f){var d=S.drafts[f.id];if(!d)return;$$('input,select,textarea',f).forEach(function(el){if(!(el.name in d))return;if(el.type==='checkbox')el.checked=d[el.name];else el.value=d[el.name]})})}
 function render(skip){
@@ -1882,6 +2157,9 @@ function render(skip){
   $('#main').innerHTML=fn();
   restoreDrafts();
   fitDeck();
+  $$('input[data-indet]').forEach(function(i){i.indeterminate=true});
+  var nd=$('#nav-dash');if(nd)nd.hidden=S.role!=='admin';
+  document.documentElement.classList.toggle('adm',S.role==='admin');
   $$('.nav a[data-r], .nav .dd').forEach(function(a){var k=a.getAttribute('data-r');var on=k===r||(k==='existing'&&r.indexOf('existing')===0);
     if(a.classList.contains('dd')){a.classList.toggle('on',on)}else if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   $$('.seg button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-v')===S.role))});
@@ -1898,7 +2176,7 @@ function startOb(f){
   setTimeout(function(){if(S.ob!==r)return;r.step=3;live()},1700);
   setTimeout(function(){if(S.ob!==r)return;
     var ok=f.force==='yes'||(f.force!=='no'&&f.city!=='Other city');
-    if(ok){r.step=6}else{r.status='rejected';r.rejectedAt=4}
+    if(ok){r.step=6}else{r.status='rejected';r.rejectedAt=4;S.feasLog.push({id:r.lead,live:1,name:f.name,emp:f.emp,email:f.email,phone:f.phone,city:f.city==='Other city'?'Other cities':f.city,address:f.address,plan:r.plan.speed,tenure:r.tenure,slot:'',status:'rejected in feasibility',reason:'No serviceable network at this address',when:'Today'})}
     live();toast(ok?'Feasible. Sent to your Deloitte admin.':'Not feasible at this address.');
   },3600);
 }
@@ -1924,9 +2202,8 @@ document.addEventListener('click',function(e){
    case 'sample':
      var f=$('#f-ob');var v={name:'Anil Kumar',emp:'DEL-48213',email:'anil.kumar@deloitte.com',phone:'9876543210',city:'Hyderabad',address:'Flat 402, Sri Sai Residency Apartments, Kondapur, Hyderabad 500084'};
      Object.keys(v).forEach(function(k){if(f.elements[k])f.elements[k].value=v[k]});break;
-   case 'ob-approve':var r=S.ob;if(!r||r.step!==6)break;r.step=7;r.assign=classify(r.form.address);render();toast('Approved. Assigning an engineer.');
-     setTimeout(function(){if(S.ob===r&&r.step===7){r.step=8;live()}},2200);break;
-   case 'ob-reject':var r2=S.ob;if(!r2||r2.step!==6)break;var rs=$('#adm-reason');r2.reason=rs?rs.value:'';r2.status='rejected';r2.rejectedAt=6;render();toast('Rejected. Employee notified.');break;
+   case 'ob-approve':if(approveLive()){render();toast('Approved. Assigning an engineer.')}break;
+   case 'ob-reject':var lid=S.ob&&S.ob.lead,ps=route()==='onboarding'?$('#adm-reason'):null;if(rejectLive(ps?ps.value:reasonFor(lid))){render();toast('Rejected. Employee notified.')}break;
    case 'ob-reset':S.ob=null;delete S.drafts['f-ob'];render(true);window.scrollTo(0,0);break;
    case 'kyc':var i=+b.getAttribute('data-i');S.ob.kyc.docs[i]=b.checked;render();break;
    case 'kyc-done':S.ob.step=9;render();toast('KYC verified by SE.');break;
@@ -1954,11 +2231,27 @@ document.addEventListener('click',function(e){
    case 'sl-go':setSlide(+b.getAttribute('data-i'));break;
    case 'sl-full':try{var st=$('#stage');if(document.fullscreenElement)document.exitFullscreen();else if(st.requestFullscreen)st.requestFullscreen()}catch(err){}break;
    case 'city-f':S.cityFilter=b.getAttribute('data-v');render();break;
-   case 'seed':S.seeds.forEach(function(s){if(s.id===b.getAttribute('data-id'))s.status=b.getAttribute('data-v')});render();toast('Employee notified.');break;
+   case 'seed':S.seeds.forEach(function(s){if(s.id===b.getAttribute('data-id')){s.status=b.getAttribute('data-v');if(s.status==='rejected')s.reason=reasonFor(s.id)}});delete S.pick[b.getAttribute('data-id')];render();toast('Employee notified.');break;
+   case 'sel-one':S.pick[b.getAttribute('data-id')]=b.checked;render();break;
+   case 'sel-city':var cn=b.getAttribute('data-city'),on1=b.checked;adminRecords().forEach(function(x){if(x.city===cn&&x.status==='pending')S.pick[x.id]=on1});render();break;
+   case 'sel-all':var on2=b.checked;visibleRecords().forEach(function(x){if(x.status==='pending')S.pick[x.id]=on2});render();break;
+   case 'bulk':
+     var bv=b.getAttribute('data-v'),cnt=0;
+     adminRecords().forEach(function(x){
+       if(x.status!=='pending'||!S.pick[x.id])return;
+       if(x.live){if(bv==='approved'?approveLive():rejectLive(reasonFor(x.id)))cnt++}
+       else S.seeds.forEach(function(sd){if(sd.id===x.id&&sd.status==='pending'){sd.status=bv;if(bv==='rejected')sd.reason=reasonFor(x.id);cnt++}});
+     });
+     S.pick={};render();
+     toast(cnt?cnt+' request'+(cnt===1?'':'s')+' '+bv+'. Employees notified.':'Select at least one pending request.');break;
+   case 'dash-f':S.dashFilter=b.getAttribute('data-v');render();break;
+   case 'export-dash':exportRows(allRecords().concat(feasRecords()).sort(function(a,b){return b.id.localeCompare(a.id)}),'All Requests');break;
    case 'tk-advance':S.tickets.forEach(function(t){if(t.id===b.getAttribute('data-id')&&t.stage<3)t.stage++});render();break;
   }
 });
 document.addEventListener('change',function(e){
+  if(e.target.id==='adm-reason'&&route()==='requests'){S.reason=e.target.value;return}
+  if(e.target.getAttribute&&e.target.getAttribute('data-reason-for')){S.rowReason[e.target.getAttribute('data-reason-for')]=e.target.value;return}
   if(e.target.name==='cat'&&e.target.form&&e.target.form.id==='f-esc'){
     var sb=e.target.form.elements.sub;sb.innerHTML=(ESC_CATS[e.target.value]||[]).map(function(x){return '<option>'+esc(x)+'</option>'}).join('');return;
   }
