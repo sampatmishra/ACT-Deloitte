@@ -409,7 +409,6 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
 .wdn b{position:relative;z-index:1;font:700 14px Poppins;color:#16233f}
 .ld{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
 .wxl{display:inline-block;width:11px;height:11px;border-radius:3px;background:#1d6f42}
-.wseal{position:absolute;left:34px;top:26px;width:48px;height:48px;border-radius:50%;border:2px double rgba(255,230,92,1);color:rgba(255,226,70,1);background:transparent;transform:rotate(-12deg);display:grid;place-items:center;text-align:center;font:800 5.6px/1.15 Poppins;letter-spacing:.06em;text-transform:uppercase;z-index:3}
 .wcb{width:11px;height:11px;border:1.5px solid #9aa6c0;border-radius:3px;background:#fff;display:inline-block;flex:none}
 .wcb.on{background:#d24b07;border-color:#d24b07}
 .wf-body{padding:12px 14px}
@@ -1979,7 +1978,7 @@ var wh=function(t,st){return '<div class="wh" style="'+(st||'')+'">'+t+'</div>'}
 function wnav(a,adm){
   return '<div class="wf-nav"><span class="lg">ACT × Deloitte</span>'+['Home','New Onboarding','Existing User','Helpdesk','Requests'].concat(adm?['Dashboard']:[]).map(function(n){return '<span class="'+(n===a?'on':'')+'">'+n+'</span>'}).join('')+'<span class="rl">User | Admin</span></div>';
 }
-function wf(url,a,body,h,adm){return '<div class="wf" style="height:'+h+'px"><div class="wf-top"><i></i><i></i><i></i><span class="wf-url">'+url+'</span></div>'+wnav(a,adm)+'<div class="wf-body">'+body+'</div><span class="wseal">Prototype</span></div>'}
+function wf(url,a,body,h,adm){return '<div class="wf" style="height:'+h+'px"><div class="wf-top"><i></i><i></i><i></i><span class="wf-url">'+url+'</span></div>'+wnav(a,adm)+'<div class="wf-body">'+body+'</div></div>'}
 function wsteps(list,cur){return list.map(function(t,i){return '<div class="wr" style="align-items:center;gap:7px"><span class="wn'+(i===cur?' on':'')+'">'+(i+1)+'</span><span>'+t+'</span></div>'}).join('')}
 function wmap(h){return '<div style="height:'+h+'px;border-radius:6px;position:relative;background:repeating-linear-gradient(0deg,#dfe5f2 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,#dfe5f2 0 1px,transparent 1px 22px),#f2f5fb"><span class="pin"></span></div>'}
 function wcal(){
@@ -2097,7 +2096,7 @@ function buildSlides(){
   var S_=[];
   S_.push({t:'Title',cls:'ttl',html:'<div class="ttl-in"><div class="ttl-logos"><img src="'+lg[0]+'" alt="ACT"><span>×</span><img src="'+lg[1]+'" alt="Deloitte"></div><h1>Employee Connectivity Portal</h1><p>One portal for the full lifecycle of a Deloitte employee\'s ACT broadband connection: onboarding, service, account changes, offboarding and helpdesk.</p><div class="ttl-tags"><span>Onboarding</span><span>Service Requests</span><span>Account Management</span><span>Offboarding</span><span>Helpdesk</span></div><div class="ttl-n">Prototype walkthrough · for discussion</div></div>'});
   var a=sl('01 · Structure','One portal, two views',['Five sections in the top menu, from onboarding to requests, plus a Dashboard for admins.','<b>User</b> view for employees: apply, raise tickets, track and escalate.','<b>Admin</b> view for the Deloitte authorised signatory: approve new connections city-wise and review request details.','Switch views with the toggle at the far right of the menu, at any time.'],wfTree());a.t='Structure';S_.push(a);
-  a=sl('02 · Home','Everything starts here',['The lifecycle line links straight to Onboarding, Service Requests, Account Management and Offboarding.','Three entry cards cover new onboarding, existing user and the helpdesk.','Two compact cards show the 200 Mbps and 500 Mbps employee plans.','A transparent yellow round "Prototype" seal sits over the logos on every page.'],wfHome());a.t='Home';S_.push(a);
+  a=sl('02 · Home','Everything starts here',['The lifecycle line links straight to Onboarding, Service Requests, Account Management and Offboarding.','Three entry cards cover new onboarding, existing user and the helpdesk.','Two compact cards show the 200 Mbps and 500 Mbps employee plans.'],wfHome());a.t='Home';S_.push(a);
   a=sl('03 · New Onboarding','Request a connection',['Employee details and the installation address. The address text decides whether a Retail or Community SE is assigned.','Optional preferred installation slot: pick a date, then an hourly slot in the First Half or Second Half.','Choose a 200 or 500 Mbps plan, then a tenure, and see the total payable.','The flow on the right is marked for discussion only and will be removed.'],wfOnb());a.t='New Onboarding';S_.push(a);
   S_.push({t:'Onboarding journey',cls:'full',html:flowSlide()});
   a=sl('05 · Admin approval','Approve city by city',['<b>Admin Approval Pendency</b> lists requests that passed ACT feasibility, grouped city-wise with a pending count.','Filter by city chips when connections arrive from many cities.','Expand a request to see employee, address, plan and preferred slot.','<b>Map View</b> opens the address on Google Maps inside the page.','<b>Select all</b> per city or overall for bulk approve or reject.'],wfAdmin());a.t='Admin approval';S_.push(a);
