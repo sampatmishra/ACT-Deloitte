@@ -6,7 +6,7 @@
 <title>ACT x Deloitte Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#10224a; --navy-2:#1a3270; --ink:#16233f; --muted:#56637f;
@@ -65,8 +65,8 @@ a{color:var(--blue)}
 .logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:10px;background:#fff}
 .logo .x{color:#56637f;font-size:1.3rem;line-height:1}
 .logo{position:relative}
-.seal{position:absolute;left:64px;top:-13px;width:112px;height:112px;border-radius:50%;border:3px double rgba(255,230,92,1);color:rgba(255,226,70,1);background:transparent;transform:rotate(-12deg);display:grid;place-items:center;text-align:center;font:800 .8rem/1.15 'Poppins',sans-serif;letter-spacing:.05em;text-indent:.05em;text-transform:uppercase;-webkit-text-stroke:.8px #000;paint-order:stroke fill;pointer-events:none;z-index:3;filter:drop-shadow(0 0 .6px rgba(110,84,0,1)) drop-shadow(0 0 1.4px rgba(110,84,0,.7))}
-.seal::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1.5px solid rgba(255,230,92,1)}
+.seal{position:absolute;left:64px;top:-13px;width:112px;height:112px;border-radius:50%;border:3px double rgba(120,200,255,1);color:rgba(120,200,255,1);background:transparent;transform:rotate(-12deg);display:grid;place-items:center;text-align:center;font:900 .78rem/1.15 'Poppins',sans-serif;letter-spacing:.04em;text-indent:.04em;text-transform:uppercase;-webkit-text-stroke:2.2px #000;paint-order:stroke fill;pointer-events:none;z-index:3;filter:drop-shadow(0 0 .6px rgba(0,45,100,1)) drop-shadow(0 0 1.4px rgba(0,45,100,.7))}
+.seal::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1.5px solid rgba(120,200,255,1)}
 .seal[hidden]{display:none}
 .logo img{display:block;height:auto}
 .logo .mark{font:700 1.9rem/1 'Poppins',sans-serif;color:var(--orange-b);letter-spacing:-.04em}
@@ -251,6 +251,11 @@ details.proto summary{cursor:pointer;font-weight:700;color:var(--muted)}
 .flow .end.done .b{background:var(--blue);color:#fff}
 .disc-wrap{border:2px dashed #c98a00;border-radius:18px;padding:12px;display:grid;gap:14px;background:var(--amber-soft)}
 .disc-tag{font:800 .78rem 'Mulish',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#7a5200;background:#ffd98a;border-radius:8px;padding:6px 10px;justify-self:start}
+.gated.locked{opacity:.38;filter:grayscale(.3);pointer-events:none;user-select:none}
+.feas-m{grid-template-columns:auto 1fr;align-items:center;padding:14px 18px;gap:12px}
+.feas-m .fi{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff}
+.feas-m .fi.ok{background:var(--green)}
+.feas-m .fi.no{background:var(--red)}
 .optag{display:inline-block;margin-left:6px;font-size:.72rem;font-weight:800;background:var(--blue-soft);color:var(--blue);border-radius:6px;padding:1px 7px;vertical-align:1px}
 .flow .skipped .b{background:var(--surface);border:2px dashed var(--muted);color:var(--muted)}
 .flow .skipped h4{color:var(--muted)}
@@ -439,7 +444,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
 .mc{aspect-ratio:1;border-radius:50%;background:#e3e8f3}
 .mc.off{opacity:.4}
 .mc.sel{background:#d24b07}
-.ts2{white-space:nowrap;border:1.5px solid #cfd6e6;border-radius:6px;padding:3px 6px;text-align:left;background:#fff;font-size:9.6px}
+.ts2{white-space:nowrap;border:1.5px solid #cfd6e6;border-radius:6px;padding:2px 6px;text-align:left;background:#fff;font-size:9.6px}
 .ts2.sel{border-color:#d24b07;background:#fff0e6;color:#d24b07}
 .kvw{display:grid;grid-template-columns:90px 1fr;gap:4px 8px}
 .kvw b{color:#16233f}
@@ -686,7 +691,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
 
   <section id="b4"><h2>4. Business requirements</h2>
     <div class="tbl-w"><table class="prd-t req"><thead><tr><th>ID</th><th>Business requirement</th><th>PRD reference</th></tr></thead><tbody>
-      <tr><td>BRQ-01</td><td>Employees can request, follow and complete a new connection in one place.</td><td>5.1 ON-01 to ON-14</td></tr>
+      <tr><td>BRQ-01</td><td>Employees can request, follow and complete a new connection in one place.</td><td>5.1 ON-01 to ON-18</td></tr>
       <tr><td>BRQ-02</td><td>Deloitte approves each new connection before ACT proceeds.</td><td>ON-07, RQ-02 to RQ-04, BR-07</td></tr>
       <tr><td>BRQ-03</td><td>Each connection reaches the right engineer team automatically.</td><td>ON-08, BR-01</td></tr>
       <tr><td>BRQ-04</td><td>Existing users can raise faults, change the account and exit through the same portal.</td><td>5.2 to 5.4</td></tr>
@@ -697,6 +702,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <tr><td>BRQ-09</td><td>Personal data and identity documents are protected.</td><td>Section 7, PL-03</td></tr>
       <tr><td>BRQ-10</td><td>The model can be reused for other companies.</td><td>Not in release 1 (open item)</td></tr>
       <tr><td>BRQ-12</td><td>Admins can see a summary of approved and rejected cases and of feasibility rejections, by city and in total, with reasons and charts.</td><td>5.6 RQ-09 to RQ-11</td></tr>
+      <tr><td>BRQ-13</td><td>Employees learn before applying whether their address is feasible for an ACT connection.</td><td>5.1 ON-02, ON-06, ON-15 to ON-17</td></tr>
       <tr><td>BRQ-11</td><td>Employees can see invoices and bill history and pay bills in the portal.</td><td>5.7 BL-01 to BL-04</td></tr>
     </tbody></table></div>
   </section>
@@ -800,6 +806,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <li>One place to request a connection and follow it from request to installation.</li>
       <li>Deloitte admin approval before ACT proceeds with any new connection.</li>
       <li>Automatic routing of each connection to the right engineer (Retail SE or Community SE) from the address.</li>
+      <li>Employees learn up front whether their address can be served.</li>
       <li>Every request has an ID, a visible status and a committed TAT.</li>
       <li>A clear escalation path when a TAT is missed.</li>
       <li>Billing history, invoices and bill payment beyond the onboarding payment.</li>
@@ -864,11 +871,11 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
     <h3 id="p51">5.1 New Onboarding</h3>
     <div class="tbl-w"><table class="prd-t req"><thead><tr><th>ID</th><th>Requirement</th><th>Priority</th><th>Prototype</th></tr></thead><tbody>
       <tr><td>ON-01</td><td>The employee submits full name, Deloitte employee ID, Deloitte email, 10-digit mobile, city and installation address. The email must be a Deloitte address.</td><td>Must</td><td>Built</td></tr>
-      <tr><td>ON-02</td><td>The city list covers ACT's serviceable cities. A city outside ACT's footprint fails the feasibility check.</td><td>Must</td><td>Built</td></tr>
-      <tr><td>ON-03</td><td>Optional preferred installation slot: a date from the next day up to 30 days ahead, then an hourly slot. First Half is 9 am to 1 pm and Second Half is 2 pm to 6 pm. Nothing is offered from 1 to 2 pm. A date needs a time.</td><td>Should</td><td>Built</td></tr>
+      <tr><td>ON-02</td><td>The city list covers ACT's serviceable cities. A city outside ACT's footprint comes back as not feasible (see ON-15).</td><td>Must</td><td>Built</td></tr>
+      <tr><td>ON-03</td><td>Optional preferred installation slot: a date from today up to 30 days ahead, then an hourly slot. First Half is 9 am to 1 pm and Second Half is 2 pm to 6 pm. Nothing is offered from 1 to 2 pm. For today, only slots starting at least 2 hours after the current system time can be chosen. A date needs a time.</td><td>Should</td><td>Built</td></tr>
       <tr><td>ON-04</td><td>Two employee plans are offered: 200 Mbps at ₹1,000 a month and 500 Mbps at ₹1,500 a month (placeholder values). The employee picks a plan and a tenure of 1, 6 or 12 months. Validity equals the tenure. Total payable is months × the plan's monthly price + installation fee + security deposit.</td><td>Must</td><td>Built</td></tr>
       <tr><td>ON-05</td><td>On submit, a lead is created on the ACT server and a lead ID is returned.</td><td>Must</td><td>Simulated</td></tr>
-      <tr><td>ON-06</td><td>An automatic pan-India feasibility check runs on the address. If not feasible, the employee is notified and the request ends.</td><td>Must</td><td>Simulated</td></tr>
+      <tr><td>ON-06</td><td>The ACT server checks feasibility on the address when the employee clicks Check Feasibility (ON-15) and confirms it again at submission. A not-feasible address cannot be submitted.</td><td>Must</td><td>Simulated</td></tr>
       <tr><td>ON-07</td><td>A feasible request becomes visible to the Deloitte admin or authorised signatory, who approves or rejects it. A rejection records a reason, notifies the employee and ends the request.</td><td>Must</td><td>Built</td></tr>
       <tr><td>ON-08</td><td>On approval the request is assigned to a Community SE or a Retail SE using text mining of the address (BR-01). The matched words are shown.</td><td>Must</td><td>Built</td></tr>
       <tr><td>ON-09</td><td>The SE completes KYC and documentation with the employee: photo ID, address proof, Deloitte employee ID card and the signed application form. The SE confirms completion.</td><td>Must</td><td>Built</td></tr>
@@ -877,9 +884,13 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <tr><td>ON-12</td><td>The NE confirms the appointment against the preferred slot and visits.</td><td>Must</td><td>Built</td></tr>
       <tr><td>ON-13</td><td>The NE marks the connection Installation completed.</td><td>Must</td><td>Built</td></tr>
       <tr><td>ON-14</td><td>The employee can see the current step of the request at any time.</td><td>Should</td><td>Built</td></tr>
+      <tr><td>ON-15</td><td>A <b>Check Feasibility</b> button sits directly under Installation address. It sends the city and address to the ACT server and shows one of two messages. Feasible: "Congratulations, your address is feasible for a ACT broadband connection". Not feasible: "Sorry, your address is not feasible for a ACT broadband connection".</td><td>Must</td><td>Simulated</td></tr>
+      <tr><td>ON-16</td><td>The preferred installation time slot, the plan selection and the Submit Connection Request button stay faded and unavailable until the address is feasible. Changing the city or address afterwards clears the result and locks them again.</td><td>Must</td><td>Built</td></tr>
+      <tr><td>ON-17</td><td>Each not-feasible result is recorded with its city and counts towards the dashboard's feasibility rejections (RQ-10).</td><td>Should</td><td>Built</td></tr>
+      <tr><td>ON-18</td><td>A <b>Clear</b> button on the right of the sample buttons empties the form: fields, feasibility result, slot, plan and tenure.</td><td>Could</td><td>Built</td></tr>
     </tbody></table></div>
-    <p><b>Status flow:</b> Submitted → Lead created → Feasibility check → Awaiting admin approval → SE assigned → KYC → Payment → Work order generated → NE confirms appointment → Installation completed. Two exits: <i>Rejected by feasibility</i> and <i>Rejected by admin</i>.</p>
-    <p class="note">The "for discussion only" flow panel beside the onboarding form is a prototype aid and is removed in the product.</p>
+    <p><b>Status flow:</b> Address entered → Feasibility checked → Submitted → Lead created → Awaiting admin approval → SE assigned → KYC → Payment → Work order generated → NE confirms appointment → Installation completed. Two exits: <i>Not feasible</i> (the request cannot be submitted) and <i>Rejected by admin</i>.</p>
+    <p class="note">The "for discussion only" flow panel beside the onboarding form is a prototype aid and is removed in the product. So are the two Use Sample Details buttons (feasible and not feasible).</p>
 
     <h3 id="p52">5.2 Service Requests</h3>
     <div class="tbl-w"><table class="prd-t req"><thead><tr><th>ID</th><th>Requirement</th><th>Priority</th><th>Prototype</th></tr></thead><tbody>
@@ -929,7 +940,7 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
       <tr><td>RQ-06</td><td>The menu shows a count of open items.</td><td>Could</td><td>Built</td></tr>
       <tr><td>RQ-07</td><td>Each pending request has a checkbox. A Select all checkbox sits in every city group and in the overall view (for the visible city filter). The admin can approve or reject all selected requests at once, with one rejection reason shared by the rejected requests.</td><td>Must</td><td>Built</td></tr>
       <tr><td>RQ-09</td><td>Rejection reasons are chosen per case. Every pending request has its own reason list. A default reason in the bulk bar is used for any case where none is chosen. A bulk rejection uses each selected case's own reason.</td><td>Must</td><td>Built</td></tr>
-      <tr><td>RQ-10</td><td><b>Admin Dashboard</b> (admins only, own menu item): counts for applications, applications rejected in the feasibility check (in total and by city), pending, approved and rejected requests, and the approval rate. Charts for the application funnel, feasibility rejections by city, status split, requests by city, rejection reasons and approved connections by plan, plus a city-wise summary table with a total row.</td><td>Must</td><td>Built</td></tr>
+      <tr><td>RQ-10</td><td><b>Admin Dashboard</b> (admins only, own menu item): counts for applications, feasibility rejections, meaning each not-feasible address check (in total and by city), pending, approved and rejected requests, and the approval rate. Charts for the application funnel, feasibility rejections by city, status split, requests by city, rejection reasons and approved connections by plan, plus a city-wise summary table with a total row.</td><td>Must</td><td>Built</td></tr>
       <tr><td>RQ-11</td><td>A list of all approved and rejected cases with request, employee, city, plan, decision, rejection reason and date. It can be filtered by decision.</td><td>Must</td><td>Built</td></tr>
       <tr><td>RQ-08</td><td>An Export to Excel button on the Admin Dashboard downloads all request data, every city and status, including applications rejected in the feasibility check, as an .xlsx file. Columns: request ID, employee name and ID, email, mobile, city, address, plan, monthly price, tenure, total payable, preferred slot, submitted time, status and rejection reason.</td><td>Must</td><td>Built</td></tr>
     </tbody></table></div>
@@ -956,14 +967,15 @@ td.grp{background:var(--surface);font-weight:800;font-size:.85rem}
   <section id="p6"><h2>6. Business rules</h2>
     <div class="tbl-w"><table class="prd-t req"><thead><tr><th>ID</th><th>Rule</th></tr></thead><tbody>
       <tr><td>BR-01</td><td><b>SE assignment.</b> If the address text contains a community marker (apartment, apartments, apt, apts, residency, residences, society, tower, towers, villa, villas, gated community, community, enclave, heights, flat, complex, condominium) the request goes to a Community SE. Otherwise it goes to a Retail SE. ACT operations should validate the marker list. A structured society or building field is a possible improvement.</td></tr>
-      <tr><td>BR-02</td><td><b>Feasibility.</b> A city outside ACT's footprint, or an address with no serviceable network, is rejected and the request ends.</td></tr>
+      <tr><td>BR-02</td><td><b>Feasibility.</b> The ACT server decides whether an address can be served. A not-feasible address shows the not-feasible message and the slot, plan and submit controls stay locked. The prototype treats the choice "Other city", and any address containing village, rural, outskirts, farm, farmhouse or hamlet, as not feasible; the real answer comes from ACT's network data.</td></tr>
       <tr><td>BR-03</td><td><b>Total payable</b> = tenure months × the chosen plan's monthly price + installation fee + security deposit. Plan validity equals the tenure.</td></tr>
-      <tr><td>BR-04</td><td><b>Slots.</b> Bookable from the next day to 30 days ahead. Hourly windows 9 am to 1 pm and 2 pm to 6 pm.</td></tr>
+      <tr><td>BR-04</td><td><b>Slots.</b> Bookable from today to 30 days ahead. Hourly windows 9 am to 1 pm and 2 pm to 6 pm. A same-day slot must start at least 2 hours after the current system time, so today shows only the later slots, and no slots once the last one is less than 2 hours away.</td></tr>
       <tr><td>BR-05</td><td><b>Identifiers.</b> Lead LD-nnnn. Work order WO-CCC-YYMM-nnnn (first three letters of the city). Tickets: FR (service), AR (account), OB (offboarding), ES (escalation) followed by a sequence number.</td></tr>
       <tr><td>BR-06</td><td><b>Resolve-by</b> = ticket creation time + the TAT for its type. Placeholder TATs: Internet Downtime 4 hrs, Slow Speeds 8 hrs, Safe Custody 24 hrs, Shifting 72 hrs, Reconnection 24 hrs, Suspension 24 hrs, Disconnection 72 hrs, Router Recovery 48 hrs, Installation 48 hrs.</td></tr>
       <tr><td>BR-07</td><td><b>Approval gate.</b> No SE is assigned until the Deloitte admin approves.</td></tr>
       <tr><td>BR-08</td><td><b>Priority.</b> Every Deloitte work order carries special priority tagging and is tracked by the central dedicated support team.</td></tr>
       <tr><td>BR-09</td><td><b>Billing mode.</b> One mode applies to the whole programme, prepaid or postpaid, set by configuration. With postpaid, the payment step is optional.</td></tr>
+      <tr><td>BR-10</td><td><b>Feasibility log.</b> Every not-feasible result is logged with its city, and "Other cities" is used for places ACT does not serve. The log feeds the dashboard counts.</td></tr>
     </tbody></table></div>
     <p class="note"><b>TAT</b> is the committed resolution time. It replaces the earlier term GART (Gross Average Resolution Time) everywhere in the portal.</p>
   </section>
@@ -1064,17 +1076,18 @@ function payable(r){var q=rp(r);return q.price*r.tenure+PLAN.install+PLAN.deposi
 var COMM=['apartments','apartment','apts','apt','residency','residences','society','towers','tower','villas','villa','gated community','community','enclave','heights','flat','complex','condominium'];
 var KYC=['Photo ID (Aadhaar, PAN or passport)','Address proof for the installation address','Deloitte employee ID card','Signed customer application form'];
 var FLOW=[
- {n:1,t:'Employee submits request',d:'New connection request through the ACT portal common link'},
- {n:2,t:'Lead created',d:'Prospect created on the ACT server'},
- {n:3,t:'Auto feasibility check',d:'Pan-India network check on the address'},
- {n:4,t:'Feasible?',dec:1,no:'No: notify employee, end'},
- {n:5,t:'Visible to Deloitte admin',d:'Admin or authorised signatory sees the request'},
- {n:6,t:'Admin approves?',dec:1,no:'No: notify employee, end'},
- {n:7,t:'Assigned to an SE',d:'Retail SE or Community SE, from the address text'},
- {n:8,t:'KYC and documentation',d:'SE completes it with the employee'},
- {n:9,t:'Payment',d:'Plan, installation and deposit'},
- {n:10,t:'Work order generated',d:'WO assigned to Network engineer'},
- {n:11,t:'NE confirms the user appointment and visits',d:'Network engineer confirms the slot and visits'}
+ {n:1,pre:1,t:'Employee enters details and address',d:'Name, employee ID, email, mobile, city and installation address'},
+ {n:2,pre:2,t:'Check Feasibility',d:'The ACT server checks the address on its network'},
+ {n:3,pre:3,dec:1,t:'Feasible?',no:'No: not-feasible message, cannot submit'},
+ {n:4,i:1,t:'Employee submits request',d:'Preferred slot and plan, then submit'},
+ {n:5,i:2,t:'Lead created',d:'Prospect created on the ACT server'},
+ {n:6,i:5,t:'Visible to Deloitte admin',d:'Admin or authorised signatory sees the request'},
+ {n:7,i:6,dec:1,t:'Admin approves?',no:'No: notify employee, end'},
+ {n:8,i:7,t:'Assigned to an SE',d:'Retail SE or Community SE, from the address text'},
+ {n:9,i:8,t:'KYC and documentation',d:'SE completes it with the employee'},
+ {n:10,i:9,t:'Payment',d:'Plan, installation and deposit'},
+ {n:11,i:10,t:'Work order generated',d:'WO assigned to Network engineer'},
+ {n:12,i:11,t:'NE confirms the user appointment and visits',d:'Network engineer confirms the slot and visits'}
 ];
 var T={
  down:{kind:'fault',label:'Internet downtime',gart:4,resp:'30 min',pre:'FR'},
@@ -1111,7 +1124,7 @@ var LADDER=[
 ];
 
 /* ---------- state ---------- */
-var S={role:'employee',tenure:6,plan:0,pick:{},rowReason:{},dashFilter:'all',history:[],feasHist:[],feasLog:[],reason:'Not eligible under Deloitte policy',ob:null,tickets:[],sel:{fault:'down',account:'safe',offboard:'suspend'},open:{},slot:{},cal:null,confirm:{},drafts:{},force:'auto',
+var S={role:'employee',tenure:6,plan:0,pick:{},rowReason:{},dashFilter:'all',history:[],feasHist:[],feasLog:[],feas:{status:'idle',key:null},reason:'Not eligible under Deloitte policy',ob:null,tickets:[],sel:{fault:'down',account:'safe',offboard:'suspend'},open:{},slot:{},cal:null,confirm:{},drafts:{},force:'auto',
 seeds:[
   {id:'LD-2212',plan:500,slot:'Fri, 9 Oct 2026 · 3:00 pm – 4:00 pm',name:'Sai Prakash',emp:'HYD-20988',email:'sai.prakash@deloitte.com',phone:'9848098765',city:'Hyderabad',address:'Flat 702, My Home Avatar Apartments, Narsingi, Hyderabad 500089',tenure:12,when:'Today, 11:05 am',status:'pending'},
   {id:'LD-2210',plan:200,slot:'Sat, 10 Oct 2026 · 10:00 am – 11:00 am',name:'Meera Iyer',emp:'HYD-20417',email:'meera.iyer@deloitte.com',phone:'9848012345',city:'Hyderabad',address:'Plot 56, Road No. 36, Jubilee Hills, Hyderabad 500033',tenure:6,when:'Today, 9:40 am',status:'pending'},
@@ -1187,13 +1200,25 @@ function planCard(compact){
    '<div class="row" style="justify-content:space-between"><div class="price">'+inr(PLAN.price)+'<small>/month</small></div><span class="selected">'+ico('check')+' Plan selected</span></div>'+
   '</div></article>';
 }
+function flowSt(r,f){
+  if(f.pre){
+    if(r)return (r.status==='rejected'&&r.rejectedAt===4&&f.pre===3)?'failed':'done';
+    var fs=S.feas.status;
+    if(f.pre===1)return fs==='idle'?'current':'done';
+    if(f.pre===2)return fs==='checking'?'current':(fs==='ok'||fs==='no'?'done':'pending');
+    return fs==='ok'?'done':fs==='no'?'failed':'pending';
+  }
+  if(!r)return (f.n===4&&S.feas.status==='ok')?'current':'pending';
+  return stepState(r,f.i);
+}
 function flowTracker(r){
   var bill=r?r.form.billing:BILLING_MODE;var post=bill==='Postpaid';
   var items=FLOW.map(function(f){
-    var st=stepState(r,f.n);
+    var st=flowSt(r,f);
     var mark=st==='done'?ico('check'):st==='failed'?ico('x'):st==='skipped'?'–':f.n;
-    var tag=(f.n===9&&post)?' <span class="optag">Optional</span>':'';
-    var d=f.d;if(f.n===9&&st==='skipped')d='Skipped, postpaid billing';else if(f.n===9&&post)d='Optional for postpaid. '+d;
+    var pay=f.i===9;
+    var tag=(pay&&post)?' <span class="optag">Optional</span>':'';
+    var d=f.d;if(pay&&st==='skipped')d='Skipped, postpaid billing';else if(pay&&post)d='Optional for postpaid. '+d;
     return '<li class="'+st+(f.dec?' dec':'')+'"><div class="b"><span>'+mark+'</span></div><div><h4>'+f.t+tag+'</h4>'+(d?'<p>'+d+'</p>':'')+(f.no?'<span class="br">'+f.no+'</span>':'')+'</div></li>';
   }).join('');
   items+='<li class="end '+((r&&r.step>=12)?'done':'pending')+'"><div class="b"><span>'+ico('check')+'</span></div><div><h4>Installation completed</h4></div></li>';
@@ -1346,25 +1371,72 @@ function pOffboard(){
 /* ----- onboarding ----- */
 function pOnboarding(){
   var r=S.ob;
-  var adminNote=S.role==='admin'?'<div class="panel info"><b>You are viewing as Deloitte admin.</b><p>Approvals for waiting requests are in <a href="#/requests">Requests</a>, or inline at step 6 of an open request.</p></div>':'';
+  var adminNote=S.role==='admin'?'<div class="panel info"><b>You are viewing as Deloitte admin.</b><p>Approvals for waiting requests are in <a href="#/requests">Requests</a>, or inline on an open request.</p></div>':'';
   return pageHead('<a href="#/">Home</a> / New onboarding','New onboarding','Request a connection and follow it through feasibility, approval, KYC and payment until the work order is generated.')+
-   '<div class="page"><div class="wrap two"><div class="stack">'+adminNote+(r?obStatus(r):obForm())+'</div><aside class="aside">'+flowTracker(r)+'</aside></div></div>';
+   '<div class="page"><div class="wrap two"><div class="stack">'+adminNote+(r?obStatus(r):obForm())+'</div><aside class="aside" id="ob-aside">'+flowTracker(r)+'</aside></div></div>';
+}
+/* Simulated back-end feasibility check */
+function feasibleAddress(city,addr){return city!=='Other city'&&!/\b(village|rural|outskirts|farm|farmhouse|hamlet)\b/i.test(addr)}
+function feasKey(){var f=$('#f-ob');return f&&f.elements.city?f.elements.city.value+'|'+f.elements.address.value.trim():null}
+function feasBox(){
+  var f=S.feas;
+  if(f.status==='checking')return '<div class="panel info feas-m"><span><span class="spin"></span></span><b>Checking your address on the ACT network...</b></div>';
+  if(f.status==='ok')return '<div class="panel ok feas-m" role="status"><span class="fi ok">'+ico('check')+'</span><b>Congratulations, your address is feasible for a ACT broadband connection</b></div>';
+  if(f.status==='no')return '<div class="panel bad feas-m" role="status"><span class="fi no">'+ico('x')+'</span><b>Sorry, your address is not feasible for a ACT broadband connection</b></div>';
+  return '<p class="muted" style="font-size:.9rem">Check your address first. The preferred time slot, plan and submit unlock when the address is feasible.</p>';
+}
+function applyFeasUI(){
+  var box=$('#feas-box');if(box)box.innerHTML=feasBox();
+  var g=$('#ob-gated');
+  if(g){var ok=S.feas.status==='ok';g.classList.toggle('locked',!ok);if(ok){g.removeAttribute('inert');g.removeAttribute('aria-disabled')}else{g.setAttribute('inert','');g.setAttribute('aria-disabled','true')}}
+  var cb=$('#feas-btn');if(cb)cb.disabled=S.feas.status==='checking';
+  var as=$('#ob-aside');if(as)as.innerHTML=flowTracker(S.ob);
+}
+function logFeasFail(city,addr){
+  var f=$('#f-ob'),g=function(n){return f&&f.elements[n]?f.elements[n].value.trim():''};
+  var lab=city==='Other city'?'Other cities':city,key=lab+'|'+addr;
+  if(S.feasLog.some(function(x){return x.key===key}))return;
+  S.feasLog.push({id:'FC-'+rnd(4),key:key,name:g('name')||'-',emp:g('emp')||'-',email:g('email')||'-',phone:g('phone')||'-',city:lab,address:addr,plan:PLAN.speed,tenure:S.tenure,slot:'',status:'rejected in feasibility',reason:'No serviceable network at this address',when:'Today'});
+}
+function runFeasibility(){
+  var f=$('#f-ob');if(!f)return;
+  var city=f.elements.city.value,addr=f.elements.address.value.trim();
+  if(addr.length<8){toast('Enter the installation address first.');f.elements.address.focus();return}
+  var key=city+'|'+addr;S.feas={status:'checking',key:key};applyFeasUI();
+  setTimeout(function(){
+    if(S.feas.key!==key||S.feas.status!=='checking')return;
+    var ok=feasibleAddress(city,addr);S.feas={status:ok?'ok':'no',key:key};
+    if(!ok)logFeasFail(city,addr);
+    applyFeasUI();
+  },1400);
+}
+function invalidateFeas(){
+  if(S.feas.status==='idle')return;
+  if(feasKey()!==S.feas.key){S.feas={status:'idle',key:null};applyFeasUI()}
 }
 var SLOTS=['9:00 am – 10:00 am','10:00 am – 11:00 am','11:00 am – 12:00 pm','12:00 pm – 1:00 pm','2:00 pm – 3:00 pm','3:00 pm – 4:00 pm','4:00 pm – 5:00 pm','5:00 pm – 6:00 pm'];
 function isoD(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function fmtDate(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]).toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'})}
+var SLOT_H=[9,10,11,12,14,15,16,17];
+function slotOk(dateKey,idx){
+  var now=new Date();
+  if(dateKey!==isoD(now))return true;
+  var start=new Date(now.getFullYear(),now.getMonth(),now.getDate(),SLOT_H[idx],0,0);
+  return start.getTime()>=now.getTime()+2*3600e3;
+}
+function dayHasSlot(key){return SLOT_H.some(function(h,i){return slotOk(key,i)})}
 function slotPicker(){
   var today=new Date();today.setHours(0,0,0,0);
-  var min=new Date(today);min.setDate(min.getDate()+1);var max=new Date(today);max.setDate(max.getDate()+30);
+  var min=new Date(today);var max=new Date(today);max.setDate(max.getDate()+30);
   if(!S.cal)S.cal={y:min.getFullYear(),m:min.getMonth()};var c=S.cal;
   var first=new Date(c.y,c.m,1),days=new Date(c.y,c.m+1,0).getDate(),cells='',i;
   for(i=0;i<first.getDay();i++)cells+='<span></span>';
-  for(i=1;i<=days;i++){var dt=new Date(c.y,c.m,i),key=isoD(dt),off=dt<min||dt>max,on=S.slot.date===key;
+  for(i=1;i<=days;i++){var dt=new Date(c.y,c.m,i),key=isoD(dt),off=dt<min||dt>max||!dayHasSlot(key),on=S.slot.date===key;
     cells+='<button type="button" class="cd'+(on?' on':'')+'" data-action="cal-day" data-d="'+key+'"'+(off?' disabled':'')+' aria-pressed="'+on+'" aria-label="'+fmtDate(key)+'">'+i+'</button>'}
   var prevOff=new Date(c.y,c.m,1)<=new Date(min.getFullYear(),min.getMonth(),1),nextOff=new Date(c.y,c.m+1,1)>max;
-  var tb=function(t,k){return '<button type="button" class="ts'+(S.slot.time===t?' on':'')+'" data-action="cal-time" data-t="'+k+'"'+(S.slot.date?'':' disabled')+' aria-pressed="'+(S.slot.time===t)+'">'+t+'</button>'};
+  var tb=function(t,k){return '<button type="button" class="ts'+(S.slot.time===t?' on':'')+'" data-action="cal-time" data-t="'+k+'"'+((S.slot.date&&slotOk(S.slot.date,k))?'':' disabled')+((S.slot.date&&!slotOk(S.slot.date,k))?' title="Same-day slots need at least 2 hours from now"':'')+' aria-pressed="'+(S.slot.time===t)+'">'+t+'</button>'};
   var times='<div class="tsc"><p class="tsh">First Half</p>'+SLOTS.slice(0,4).map(function(t,k){return tb(t,k)}).join('')+'</div><div class="tsc"><p class="tsh">Second Half</p>'+SLOTS.slice(4).map(function(t,k){return tb(t,k+4)}).join('')+'</div>';
-  var picked=S.slot.date?'<b>'+fmtDate(S.slot.date)+'</b>'+(S.slot.time?' · <b>'+S.slot.time+'</b>':' · choose a time window'):'Pick a date, then a time window. Available for the next 30 days.';
+  var picked=S.slot.date?'<b>'+fmtDate(S.slot.date)+'</b>'+(S.slot.time?' · <b>'+S.slot.time+'</b>':' · choose a time window'):'Pick a date, then a time window. Today is allowed for slots starting at least 2 hours from now. Available for the next 30 days.';
   return '<div class="slotpick"><div class="cal" role="group" aria-label="Choose installation date"><div class="cal-h"><button type="button" class="btn btn-line btn-sm" data-action="cal-prev" aria-label="Previous month"'+(prevOff?' disabled':'')+'>‹</button><b>'+first.toLocaleDateString('en-IN',{month:'long',year:'numeric'})+'</b><button type="button" class="btn btn-line btn-sm" data-action="cal-next" aria-label="Next month"'+(nextOff?' disabled':'')+'>›</button></div>'+
    '<div class="cal-g">'+['S','M','T','W','T','F','S'].map(function(x){return '<span class="wd">'+x+'</span>'}).join('')+cells+'</div></div>'+
    '<div class="tsw"><p style="font-weight:800;font-size:.85rem;margin-bottom:8px">Installation Time Slot</p><div class="tsl">'+times+'</div></div></div>'+
@@ -1372,15 +1444,21 @@ function slotPicker(){
 }
 function woNo(r){var d=new Date().toISOString();return 'WO-'+r.form.city.slice(0,3).toUpperCase()+'-'+d.slice(2,4)+d.slice(5,7)+'-'+rnd(4)}
 function obForm(){
+  var ok=S.feas.status==='ok';
   return '<form class="card form" id="f-ob" data-form="ob" novalidate>'+
-   '<div class="row" style="justify-content:space-between"><h2>Connection request</h2><button type="button" class="btn btn-line btn-sm" data-action="sample">Use Sample Details</button></div>'+
+   '<h2>Connection request</h2>'+
+   '<div class="row" style="justify-content:space-between"><div class="row" style="gap:8px"><button type="button" class="btn btn-line btn-sm" data-action="sample" data-v="ok">Use Sample Details (Feasible)</button><button type="button" class="btn btn-line btn-sm" data-action="sample" data-v="no">Use Sample Details (Not Feasible)</button></div><button type="button" class="btn btn-line btn-sm" data-action="ob-clear">Clear</button></div>'+
    '<div class="grid2">'+inp('Full name','name',{req:1})+inp('Deloitte employee ID','emp',{req:1})+'</div>'+
    '<div class="grid2">'+inp('Deloitte email','email',{req:1,type:'email',pat:'.+@.*deloitte.*',title:'Use your Deloitte email address',ph:'name@deloitte.com'})+inp('Mobile number','phone',{req:1,type:'tel',pat:MOBILE,title:'10-digit Indian mobile number'})+'</div>'+
    sel('City','city',CITIES.concat(['Other city']),{req:1})+
    area('Installation address','address',{req:1,ph:'Flat or house number, building or society name, street, area, landmark',hint:'Include your apartment or society name if you live in one. We use it to pick the right engineer.'})+
-   '<div><p style="font-weight:800;font-size:.9rem;margin-bottom:10px">Preferred installation time slot <span class="muted" style="font-weight:600">(optional)</span></p>'+slotPicker()+'</div>'+
-   '<div><p style="font-weight:800;font-size:.9rem;margin-bottom:10px">Your plan</p>'+planCard()+'</div>'+
-   '<div><button class="btn btn-primary" type="submit">Submit Connection Request</button></div></form>';
+   '<div><button type="button" class="btn btn-primary btn-sm" id="feas-btn" data-action="feas-check"'+(S.feas.status==='checking'?' disabled':'')+'>Check Feasibility</button></div>'+
+   '<div id="feas-box" aria-live="polite">'+feasBox()+'</div>'+
+   '<div class="gated form'+(ok?'':' locked')+'" id="ob-gated"'+(ok?'':' inert aria-disabled="true"')+'>'+
+    '<div><p style="font-weight:800;font-size:.9rem;margin-bottom:10px">Preferred installation time slot <span class="muted" style="font-weight:600">(optional)</span></p>'+slotPicker()+'</div>'+
+    '<div><p style="font-weight:800;font-size:.9rem;margin-bottom:10px">Your plan</p>'+planCard()+'</div>'+
+    '<div><button class="btn btn-primary" type="submit">Submit Connection Request</button></div>'+
+   '</div></form>';
 }
 function obSummary(r){
   var f=r.form,t=PLAN.tenures.filter(function(x){return x.m===r.tenure})[0];
@@ -1688,7 +1766,7 @@ var PDFX=(function(){
     var flush=function(){while(line.length&&line[line.length-1].sp){line.pop()}if(line.length)lines.push(line);line=[];x=0};
     toks.forEach(function(k){
       if(k.sp){if(line.length){k.x=x;line.push(k);x+=k.w}return}
-      if(k.w>width){
+      if(k.w>width+0.05){
         var seg='';
         for(var q=0;q<k.t.length;q++){
           if(tw(seg+k.t[q],k.b,k.i,size)>width-x&&seg){var wseg=tw(seg,k.b,k.i,size);line.push({t:seg,b:k.b,i:k.i,c:k.c,w:wseg,x:x});flush();seg=''}
@@ -1778,7 +1856,7 @@ var PDFX=(function(){
       var sumMin=minw.reduce(function(a,b){return a+b},0),extra=Math.max(avail-sumMin,0),flex=0;
       for(var d=0;d<n;d++)flex+=Math.max(natural[d]-minw[d],0);
       for(var e=0;e<n;e++)widths.push(minw[e]+(flex?extra*Math.max(natural[e]-minw[e],0)/flex:0));
-      var tot=widths.reduce(function(a,b){return a+b},0);if(tot>avail)widths=widths.map(function(w){return w*avail/tot});
+      var tot=widths.reduce(function(a,b){return a+b},0);if(tot>avail+0.05)widths=widths.map(function(w){return w*avail/tot});
     }
     var xs=[],xx=ML;widths.forEach(function(w){xs.push(xx+pad);xx+=w+pad*2});
     var cellLines=function(cells){return cells.map(function(cell,c){return wrap(cell,size,widths[c])})};
@@ -1981,8 +2059,8 @@ function wnav(a,adm){
 function wf(url,a,body,h,adm){return '<div class="wf" style="height:'+h+'px"><div class="wf-top"><i></i><i></i><i></i><span class="wf-url">'+url+'</span></div>'+wnav(a,adm)+'<div class="wf-body">'+body+'</div></div>'}
 function wsteps(list,cur){return list.map(function(t,i){return '<div class="wr" style="align-items:center;gap:7px"><span class="wn'+(i===cur?' on':'')+'">'+(i+1)+'</span><span>'+t+'</span></div>'}).join('')}
 function wmap(h){return '<div style="height:'+h+'px;border-radius:6px;position:relative;background:repeating-linear-gradient(0deg,#dfe5f2 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,#dfe5f2 0 1px,transparent 1px 22px),#f2f5fb"><span class="pin"></span></div>'}
-function wcal(){
-  var cells='';for(var i=0;i<28;i++)cells+='<span class="mc'+(i<4?' off':'')+(i===15?' sel':'')+'"></span>';
+function wcal(rows){
+  var cells='';for(var i=0;i<(rows||4)*7;i++)cells+='<span class="mc'+(i<4?' off':'')+(i===15?' sel':'')+'"></span>';
   return '<div class="bx pl" style="padding:6px"><div style="font-weight:800;margin-bottom:4px;text-align:center">October 2026</div><div class="mcg">'+cells+'</div></div>';
 }
 function wslots(){
@@ -2003,15 +2081,20 @@ function wfHome(){
   return wf('portal / home','Home',wc(hero+cards+plan,'gap:10px'),556);
 }
 function wfOnb(){
+  var okmsg=wbx('gr','<b>Congratulations, your address is feasible for a ACT broadband connection</b>','padding:4px 8px;font-size:9.5px');
+  var nomsg=wbx('','<b>Sorry, your address is not feasible for a ACT broadband connection</b>','padding:5px 8px;font-size:9.5px;background:#fdecec;border-color:#e7a9a9;color:#c53030');
   var form=wc(
+    wr(wr(wbx('pl','Use Sample Details (Feasible)','padding:2px 6px;font-size:9.5px')+wbx('pl','Use Sample Details (Not Feasible)','padding:2px 6px;font-size:9.5px'),'gap:6px')+wbx('pl','Clear','padding:2px 8px;font-size:9.5px'),'justify-content:space-between')+
     wr(win('Full name','Anil Kumar','flex:1')+win('Deloitte employee ID','DEL-48213','flex:1'),'gap:8px')+
     wr(win('Deloitte email','anil.kumar@deloitte.com','flex:1')+win('Mobile number','9876543210','flex:1'),'gap:8px')+
     win('City','Hyderabad')+win('Installation address','Flat 402, Sri Sai Residency Apartments, Kondapur…','')+
-    '<div><div class="lbl">Preferred installation time slot (optional)</div>'+wr(wc(wcal(),'width:150px')+wslots(),'gap:8px')+'</div>'+
+    wr(wbtn('Check Feasibility','padding:5px 12px'),'justify-content:flex-start')+
+    wr(okmsg+nomsg,'gap:6px')+
+    '<div style="opacity:.4;display:grid;gap:5px"><div><div class="lbl">Preferred installation time slot (optional) · faded until the address is feasible</div>'+wr(wc(wcal(3),'width:150px')+wslots(),'gap:8px')+'</div>'+
     wbx('pl',wr('<div style="flex:1"><b style="color:#16233f">Plan:</b> <u>200 Mbps</u> | 500 Mbps</div><b>Tenure: 1 | <u>6</u> | 12 months</b>'),'padding:6px 8px')+
-    wbtn('Submit Connection Request','padding:7px'),'gap:7px;flex:1.7');
-  var tr=wbx('dash','<div class="tag-d">For discussion only · to be removed</div>'+wc(wsteps(['Employee submits request','Lead created','Auto feasibility check','Feasible?','Visible to Deloitte admin','Admin approves?','Assigned to an SE','KYC and documentation','Payment','Work order generated','NE confirms & visits'],-1)+wr('<span class="wn gr">✓</span><span>Installation completed</span>','align-items:center;gap:7px'),'gap:6px;margin-top:6px'),'flex:1;font-size:11px');
-  return wf('portal / new-onboarding','New Onboarding',wr(form+tr,'gap:12px'),556);
+    wbtn('Submit Connection Request','padding:7px')+'</div>','gap:5px;flex:1.7');
+  var tr=wbx('dash','<div class="tag-d">For discussion only · to be removed</div>'+wc(wsteps(['Employee enters details and address','Check Feasibility','Feasible?','Employee submits request','Lead created','Visible to Deloitte admin','Admin approves?','Assigned to an SE','KYC and documentation','Payment','Work order generated','NE confirms & visits'],1)+wr('<span class="wn gr">✓</span><span>Installation completed</span>','align-items:center;gap:7px'),'gap:5px;margin-top:6px'),'flex:1;font-size:10.5px');
+  return wf('portal / new-onboarding','New Onboarding',wr(form+tr,'gap:12px'),606);
 }
 var wcb=function(on){return '<span class="wcb'+(on?' on':'')+'"></span>'};
 var wbulk=function(n){return wr(wr(wcb(n>0)+'<b style="color:#16233f">Select all</b>','align-items:center;gap:5px')+'<span>'+n+' selected</span>'+wbx('gr','Approve Selected','padding:2px 7px')+wbx('','Reject Selected','padding:2px 7px;color:#c53030;border-color:#c53030'),'align-items:center;gap:7px;padding:6px 8px;border:1.5px solid #dbe2ef;border-radius:8px;background:#f2f5fb;margin:6px 0 2px;font-size:10px')};
@@ -2082,13 +2165,13 @@ function flowSlide(){
   var nd=function(n,t,s,k){return '<div class="fn '+(k||'')+'"><b>'+n+'</b><span>'+t+'</span>'+(s?'<small>'+s+'</small>':'')+'</div>'};
   var ar='<span class="far">→</span>';
   var no=function(t){return '<div class="fno">'+t+'</div>'};
-  var r1='<div class="frow">'+nd(1,'Employee submits request','Via ACT portal link')+ar+nd(2,'Lead created','Prospect on ACT server')+ar+nd(3,'Auto feasibility check','Pan-India')+ar+nd(4,'Feasible?','','dc')+ar+nd(5,'Visible to Deloitte admin','Admin or signatory')+'</div>';
   var sp='<div style="flex:1"></div>',asp='<span class="far" style="visibility:hidden">→</span>';
-  var r1n='<div class="frow n">'+sp+asp+sp+asp+sp+asp+'<div style="flex:1">'+no('No: notify employee, end')+'</div>'+asp+sp+'</div>';
-  var r2='<div class="frow">'+nd(6,'Admin approves?','','dc')+ar+nd(7,'Assigned to an SE','Retail or Community, from address text')+ar+nd(8,'KYC and documentation','SE completes with employee')+ar+nd(9,'Payment','Plan, installation, deposit')+'</div>';
-  var r2n='<div class="frow n"><div style="flex:1">'+no('No: notify employee, end')+'</div>'+asp+sp+asp+sp+asp+sp+'</div>';
-  var r3='<div class="frow">'+nd(10,'Work order generated','WO assigned to Network engineer')+ar+nd(11,'NE confirms the user appointment and visits','')+ar+nd('✓','Installation completed','','end')+'<div class="fp">★ Special priority tagging and a central dedicated support team keep turnaround low.</div></div>';
-  return '<div class="sl-full"><div class="sl-k">04 · The onboarding journey</div><h2>From request to installed connection in 11 steps</h2><p class="lead">Two decision points protect the process: ACT feasibility and Deloitte admin approval. Rejections notify the employee and end the request.</p><div class="fl">'+r1+r1n+r2+r2n+r3+'</div></div>';
+  var r1='<div class="frow">'+nd(1,'Employee enters details and address','Name, ID, city, address')+ar+nd(2,'Check Feasibility','ACT server checks the address')+ar+nd(3,'Feasible?','','dc')+ar+nd(4,'Employee submits request','Slot and plan, then submit')+ar+nd(5,'Lead created','Prospect on ACT server')+'</div>';
+  var r1n='<div class="frow n">'+sp+asp+sp+asp+'<div style="flex:1">'+no('No: message shown, cannot submit')+'</div>'+asp+sp+asp+sp+'</div>';
+  var r2='<div class="frow">'+nd(6,'Visible to Deloitte admin','Admin or signatory')+ar+nd(7,'Admin approves?','','dc')+ar+nd(8,'Assigned to an SE','Retail or Community, from address text')+ar+nd(9,'KYC and documentation','SE completes with employee')+ar+nd(10,'Payment','Plan, installation, deposit')+'</div>';
+  var r2n='<div class="frow n">'+sp+asp+'<div style="flex:1">'+no('No: notify employee, end')+'</div>'+asp+sp+asp+sp+asp+sp+'</div>';
+  var r3='<div class="frow">'+nd(11,'Work order generated','WO assigned to Network engineer')+ar+nd(12,'NE confirms the user appointment and visits','')+ar+nd('✓','Installation completed','','end')+'<div class="fp">★ Special priority tagging and a central dedicated support team keep turnaround low.</div></div>';
+  return '<div class="sl-full"><div class="sl-k">04 · The onboarding journey</div><h2>From address check to installed connection in 12 steps</h2><p class="lead">Two decision points protect the process: the feasibility check before an employee can submit, and Deloitte admin approval. A not-feasible address cannot be submitted. An admin rejection notifies the employee and ends the request.</p><div class="fl">'+r1+r1n+r2+r2n+r3+'</div></div>';
 }
 function buildSlides(){
   var lg=$$('.logo img').map(function(i){return i.src});
@@ -2097,7 +2180,7 @@ function buildSlides(){
   S_.push({t:'Title',cls:'ttl',html:'<div class="ttl-in"><div class="ttl-logos"><img src="'+lg[0]+'" alt="ACT"><span>×</span><img src="'+lg[1]+'" alt="Deloitte"></div><h1>Employee Connectivity Portal</h1><p>One portal for the full lifecycle of a Deloitte employee\'s ACT broadband connection: onboarding, service, account changes, offboarding and helpdesk.</p><div class="ttl-tags"><span>Onboarding</span><span>Service Requests</span><span>Account Management</span><span>Offboarding</span><span>Helpdesk</span></div><div class="ttl-n">Prototype walkthrough · for discussion</div></div>'});
   var a=sl('01 · Structure','One portal, two views',['Five sections in the top menu, from onboarding to requests, plus a Dashboard for admins.','<b>User</b> view for employees: apply, raise tickets, track and escalate.','<b>Admin</b> view for the Deloitte authorised signatory: approve new connections city-wise and review request details.','Switch views with the toggle at the far right of the menu, at any time.'],wfTree());a.t='Structure';S_.push(a);
   a=sl('02 · Home','Everything starts here',['The lifecycle line links straight to Onboarding, Service Requests, Account Management and Offboarding.','Three entry cards cover new onboarding, existing user and the helpdesk.','Two compact cards show the 200 Mbps and 500 Mbps employee plans.'],wfHome());a.t='Home';S_.push(a);
-  a=sl('03 · New Onboarding','Request a connection',['Employee details and the installation address. The address text decides whether a Retail or Community SE is assigned.','Optional preferred installation slot: pick a date, then an hourly slot in the First Half or Second Half.','Choose a 200 or 500 Mbps plan, then a tenure, and see the total payable.','The flow on the right is marked for discussion only and will be removed.'],wfOnb());a.t='New Onboarding';S_.push(a);
+  a=sl('03 · New Onboarding','Request a connection',['Employee details and the installation address. The address text decides whether a Retail or Community SE is assigned.','<b>Check Feasibility</b> sits under the address. The ACT server replies feasible or not feasible. Until it is feasible, the slot, plan and submit stay faded.','Optional preferred installation slot, including today from 2 hours ahead, then a 200 or 500 Mbps plan and tenure.','Two sample buttons fill the form, one feasible and one not feasible. Clear empties it.','The flow on the right is marked for discussion only and will be removed.'],wfOnb());a.t='New Onboarding';S_.push(a);
   S_.push({t:'Onboarding journey',cls:'full',html:flowSlide()});
   a=sl('05 · Admin approval','Approve city by city',['<b>Admin Approval Pendency</b> lists requests that passed ACT feasibility, grouped city-wise with a pending count.','Filter by city chips when connections arrive from many cities.','Expand a request to see employee, address, plan and preferred slot.','<b>Map View</b> opens the address on Google Maps inside the page.','<b>Select all</b> per city or overall for bulk approve or reject.'],wfAdmin());a.t='Admin approval';S_.push(a);
   a=sl('06 · Existing user','Choose what you need',['Service Requests for faults.','Account Management for changes to a live connection.','Offboarding for leaving or pausing.','Every request gets a ticket ID, a first-response time and a TAT.'],wfHub());a.t='Existing user';S_.push(a);
@@ -2179,7 +2262,7 @@ function startOb(f){
   setTimeout(function(){if(S.ob!==r)return;r.step=2;r.lead='LD-'+rnd(4);live()},800);
   setTimeout(function(){if(S.ob!==r)return;r.step=3;live()},1700);
   setTimeout(function(){if(S.ob!==r)return;
-    var ok=f.force==='yes'||(f.force!=='no'&&f.city!=='Other city');
+    var ok=feasibleAddress(f.city,f.address);
     if(ok){r.step=6}else{r.status='rejected';r.rejectedAt=4;S.feasLog.push({id:r.lead,live:1,name:f.name,emp:f.emp,email:f.email,phone:f.phone,city:f.city==='Other city'?'Other cities':f.city,address:f.address,plan:r.plan.speed,tenure:r.tenure,slot:'',status:'rejected in feasibility',reason:'No serviceable network at this address',when:'Today'})}
     live();toast(ok?'Feasible. Sent to your Deloitte admin.':'Not feasible at this address.');
   },3600);
@@ -2204,11 +2287,14 @@ document.addEventListener('click',function(e){
    case 'sel':S.sel[b.getAttribute('data-k')]=b.getAttribute('data-v');render();break;
    case 'clear':S.confirm[b.getAttribute('data-k')]=null;render();break;
    case 'sample':
-     var f=$('#f-ob');var v={name:'Anil Kumar',emp:'DEL-48213',email:'anil.kumar@deloitte.com',phone:'9876543210',city:'Hyderabad',address:'Flat 402, Sri Sai Residency Apartments, Kondapur, Hyderabad 500084'};
-     Object.keys(v).forEach(function(k){if(f.elements[k])f.elements[k].value=v[k]});break;
+     var f=$('#f-ob'),SMP={ok:{name:'Anil Kumar',emp:'DEL-48213',email:'anil.kumar@deloitte.com',phone:'9876543210',city:'Hyderabad',address:'Flat 402, Sri Sai Residency Apartments, Kondapur, Hyderabad 500084'},no:{name:'Rahul Mehta',emp:'DEL-51377',email:'rahul.mehta@deloitte.com',phone:'9812345678',city:'Hyderabad',address:'Survey No. 112, Rampally Village, Medchal outskirts, Hyderabad 501401'}},v=SMP[b.getAttribute('data-v')]||SMP.ok;
+     Object.keys(v).forEach(function(k){if(f.elements[k])f.elements[k].value=v[k]});
+     S.feas={status:'idle',key:null};applyFeasUI();break;
+   case 'feas-check':runFeasibility();break;
+   case 'ob-clear':S.feas={status:'idle',key:null};S.slot={};S.cal=null;S.plan=0;PLAN.speed=PLANS[0].speed;PLAN.price=PLANS[0].price;S.tenure=6;delete S.drafts['f-ob'];render(true);toast('Form cleared.');break;
    case 'ob-approve':if(approveLive()){render();toast('Approved. Assigning an engineer.')}break;
    case 'ob-reject':var lid=S.ob&&S.ob.lead,ps=route()==='onboarding'?$('#adm-reason'):null;if(rejectLive(ps?ps.value:reasonFor(lid))){render();toast('Rejected. Employee notified.')}break;
-   case 'ob-reset':S.ob=null;delete S.drafts['f-ob'];render(true);window.scrollTo(0,0);break;
+   case 'ob-reset':S.ob=null;S.feas={status:'idle',key:null};delete S.drafts['f-ob'];render(true);window.scrollTo(0,0);break;
    case 'kyc':var i=+b.getAttribute('data-i');S.ob.kyc.docs[i]=b.checked;render();break;
    case 'kyc-done':S.ob.step=9;render();toast('KYC verified by SE.');break;
    case 'paym':S.ob.method=b.getAttribute('data-v');render();break;
@@ -2219,8 +2305,8 @@ document.addEventListener('click',function(e){
    case 'map-close':if(b.id==='modal'&&e.target!==b)break;closeMap();break;
    case 'cal-prev':S.cal.m--;if(S.cal.m<0){S.cal.m=11;S.cal.y--}render();break;
    case 'cal-next':S.cal.m++;if(S.cal.m>11){S.cal.m=0;S.cal.y++}render();break;
-   case 'cal-day':S.slot={date:b.getAttribute('data-d'),time:S.slot.date===b.getAttribute('data-d')?S.slot.time:null};render();break;
-   case 'cal-time':S.slot.time=SLOTS[+b.getAttribute('data-t')];render();break;
+   case 'cal-day':var dk=b.getAttribute('data-d'),tk0=S.slot.time;S.slot={date:dk,time:(tk0&&slotOk(dk,SLOTS.indexOf(tk0)))?tk0:null};render();break;
+   case 'cal-time':if(S.slot.date&&slotOk(S.slot.date,+b.getAttribute('data-t'))){S.slot.time=SLOTS[+b.getAttribute('data-t')];render()}break;
    case 'cal-clear':S.slot={};render();break;
    case 'skip-pay':var r4=S.ob;r4.skipped=true;r4.step=10;r4.wo=woNo(r4);render();toast('Payment skipped. Work order generated.');break;
    case 'ne-confirm':S.ob.step=11;render();toast('NE confirmed the appointment.');break;
@@ -2262,12 +2348,13 @@ document.addEventListener('change',function(e){
   var b=e.target.closest('[data-action="kyc"]');
   if(b){S.ob.kyc.docs[+b.getAttribute('data-i')]=b.checked;render()}
 });
+document.addEventListener('input',function(e){var t=e.target;if(t.form&&t.form.id==='f-ob'&&(t.name==='address'||t.name==='city'))invalidateFeas()});
 document.addEventListener('submit',function(e){
   var f=e.target.closest('form[data-form]');if(!f)return;e.preventDefault();
   if(!f.checkValidity()){f.reportValidity();return}
   var d={};$$('input,select,textarea',f).forEach(function(el){if(el.name)d[el.name]=el.type==='checkbox'?el.checked:el.value});
   var k=f.getAttribute('data-form');
-  if(k==='ob'){if(S.slot.date&&!S.slot.time){toast('Pick a time window, or clear the date.');return}var sl=S.slot.date?{date:S.slot.date,time:S.slot.time}:null;S.slot={};delete S.drafts[f.id];startOb({name:d.name.trim(),emp:d.emp.trim(),email:d.email,phone:d.phone,city:d.city,address:d.address.trim(),force:d.force,billing:BILLING_MODE,slot:sl});render(true);window.scrollTo(0,0);return}
+  if(k==='ob'){if(S.feas.status!=='ok'){toast('Check feasibility first.');return}if(S.slot.date&&!S.slot.time){toast('Pick a time window, or clear the date.');return}if(S.slot.date&&S.slot.time&&!slotOk(S.slot.date,SLOTS.indexOf(S.slot.time))){S.slot.time=null;render();toast('That slot is now less than 2 hours away. Pick a later one.');return}var sl=S.slot.date?{date:S.slot.date,time:S.slot.time}:null;S.slot={};delete S.drafts[f.id];startOb({name:d.name.trim(),emp:d.emp.trim(),email:d.email,phone:d.phone,city:d.city,address:d.address.trim(),force:d.force,billing:BILLING_MODE,slot:sl});render(true);window.scrollTo(0,0);return}
   if(k==='esc'){var tk=addTicket('esc',d);tk.label='Escalation to '+d.level.split(' · ')[0]+' · '+d.cat+' · '+d.sub+(d.tid&&d.tid.trim()?' · '+d.tid.trim():'');delete S.drafts[f.id];render(true);toast('Escalation '+tk.id+' sent to the central desk.');return}
   var type=S.sel[k];var tk2=addTicket(type,d);delete S.drafts[f.id];render(true);window.scrollTo(0,0);toast('Ticket '+tk2.id+' raised.');
 });
